@@ -1,0 +1,906 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0411274423ADBB87008DB54F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411274323ADBB87008DB54F /* AppDelegate.m */; };
+		0411274A23ADBB87008DB54F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411274923ADBB87008DB54F /* ViewController.m */; };
+		0411274D23ADBB87008DB54F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0411274B23ADBB87008DB54F /* Main.storyboard */; };
+		0411274F23ADBB89008DB54F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0411274E23ADBB89008DB54F /* Assets.xcassets */; };
+		0411275223ADBB89008DB54F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0411275023ADBB89008DB54F /* LaunchScreen.storyboard */; };
+		0411275523ADBB89008DB54F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411275423ADBB89008DB54F /* main.m */; };
+		0411276223ADC03E008DB54F /* SWMainScorllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411276123ADC03E008DB54F /* SWMainScorllerView.m */; };
+		0411276523ADC068008DB54F /* SWBaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411276423ADC068008DB54F /* SWBaseTextView.m */; };
+		0411276923ADC123008DB54F /* NSString+KKStringDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411276823ADC123008DB54F /* NSString+KKStringDate.m */; };
+		0411277023ADC2DD008DB54F /* image_btn_remove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0411276C23ADC2DD008DB54F /* image_btn_remove@2x.png */; };
+		0411277123ADC2DD008DB54F /* GYStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411276D23ADC2DD008DB54F /* GYStickerView.m */; };
+		0411277223ADC2DD008DB54F /* image_btn_resize@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0411276E23ADC2DD008DB54F /* image_btn_resize@2x.png */; };
+		0411277323ADC2DD008DB54F /* image_btn_rotate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0411276F23ADC2DD008DB54F /* image_btn_rotate@2x.png */; };
+		0411277923ADC35A008DB54F /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411277523ADC35A008DB54F /* ListItem.m */; };
+		0411277A23ADC35A008DB54F /* LabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411277823ADC35A008DB54F /* LabView.m */; };
+		0411277D23ADC3A2008DB54F /* SWBaseLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411277C23ADC3A2008DB54F /* SWBaseLable.m */; };
+		0411278023ADC4F9008DB54F /* SWPickViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411277F23ADC4F9008DB54F /* SWPickViewModel.m */; };
+		0411278823ADC5A2008DB54F /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0411278223ADC5A2008DB54F /* 2.png */; };
+		0411278923ADC5A2008DB54F /* YZChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411278323ADC5A2008DB54F /* YZChatInputView.m */; };
+		0411278A23ADC5A2008DB54F /* ChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411278623ADC5A2008DB54F /* ChatView.m */; };
+		0411278B23ADC5A2008DB54F /* YZChatInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411278723ADC5A2008DB54F /* YZChatInputView.xib */; };
+		0411278E23ADC5FC008DB54F /* SWBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411278D23ADC5FC008DB54F /* SWBaseView.m */; };
+		0411279123ADC645008DB54F /* SWEditorBorderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411279023ADC645008DB54F /* SWEditorBorderModel.m */; };
+		041127AB23ADECCD008DB54F /* SWViewFontModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127AA23ADECCD008DB54F /* SWViewFontModel.m */; };
+		041127AE23ADEDBA008DB54F /* UIView+SWView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127AD23ADEDBA008DB54F /* UIView+SWView.m */; };
+		041127B123ADF896008DB54F /* SWEditorToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127B023ADF896008DB54F /* SWEditorToolView.m */; };
+		041127B423ADFB69008DB54F /* SWKeyboardToolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127B323ADFB69008DB54F /* SWKeyboardToolModel.m */; };
+		041127B723ADFFF8008DB54F /* SWKeyboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127B623ADFFF8008DB54F /* SWKeyboardCell.m */; };
+		041127BA23AE0902008DB54F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127B823AE0901008DB54F /* UIView+Extension.m */; };
+		041127C523AE0A1E008DB54F /* SWFontView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127C423AE0A1E008DB54F /* SWFontView.m */; };
+		041127C823AE10F5008DB54F /* SWFontBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127C723AE10F5008DB54F /* SWFontBorder.m */; };
+		041127CB23AE1155008DB54F /* SWEditorBoderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127CA23AE1155008DB54F /* SWEditorBoderViewModel.m */; };
+		041127CF23AE11B8008DB54F /* YZNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127CD23AE11B8008DB54F /* YZNetWorking.m */; };
+		041127D923AE13CA008DB54F /* SWEditorBorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127D723AE13CA008DB54F /* SWEditorBorderCell.m */; };
+		041127DA23AE13CA008DB54F /* SWEditorBorderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041127D823AE13CA008DB54F /* SWEditorBorderCell.xib */; };
+		041127DD23AE1548008DB54F /* SWFontListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127DC23AE1548008DB54F /* SWFontListView.m */; };
+		041127E123AE15B0008DB54F /* SWFontModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127E023AE15B0008DB54F /* SWFontModel.m */; };
+		041127E423AE1782008DB54F /* SWFontViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127E323AE1782008DB54F /* SWFontViewModel.m */; };
+		041127E823AE18D7008DB54F /* SWFontStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127E623AE18D7008DB54F /* SWFontStyleCell.m */; };
+		041127E923AE18D7008DB54F /* SWFontStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041127E723AE18D7008DB54F /* SWFontStyleCell.xib */; };
+		041127ED23AE1BDE008DB54F /* SWFontSizeSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127EC23AE1BDE008DB54F /* SWFontSizeSliderView.m */; };
+		041127F123AE1C17008DB54F /* PublicAudioPlayProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127EF23AE1C17008DB54F /* PublicAudioPlayProgressView.m */; };
+		041127F423AE1D34008DB54F /* SWFontFormatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127F323AE1D34008DB54F /* SWFontFormatView.m */; };
+		041127F723AE1D98008DB54F /* SWBaseFontFormaterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127F623AE1D98008DB54F /* SWBaseFontFormaterCell.m */; };
+		041127FA23AE1E12008DB54F /* SWFontFormatterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127F923AE1E12008DB54F /* SWFontFormatterCell.m */; };
+		041127FE23AE1EDB008DB54F /* SWFontSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041127FD23AE1EDB008DB54F /* SWFontSpaceCell.m */; };
+		0411280123AE1F01008DB54F /* SWFontAligementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411280023AE1F01008DB54F /* SWFontAligementCell.m */; };
+		0411280423AE1F5F008DB54F /* SWFontSpceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411280323AE1F5F008DB54F /* SWFontSpceModel.m */; };
+		0411280823AE1FAA008DB54F /* SWFontSpaceNumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411280623AE1FAA008DB54F /* SWFontSpaceNumCell.m */; };
+		0411280923AE1FAA008DB54F /* SWFontSpaceNumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411280723AE1FAA008DB54F /* SWFontSpaceNumCell.xib */; };
+		0473CE7F23B0AABD00F119DF /* JRSandBoxPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 0473CE7E23B0AABD00F119DF /* JRSandBoxPath.m */; };
+		0473CE8423B0B31800F119DF /* SWThemeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0473CE8323B0B31800F119DF /* SWThemeView.m */; };
+		0473CE8623B0B32500F119DF /* SWThemeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0473CE8523B0B32500F119DF /* SWThemeView.xib */; };
+		0473CE8923B0B3DE00F119DF /* SWThemeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0473CE8823B0B3DE00F119DF /* SWThemeViewModel.m */; };
+		0473CE8C23B0B40800F119DF /* SWThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0473CE8B23B0B40800F119DF /* SWThemeModel.m */; };
+		0473CE9023B0B59500F119DF /* SWThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0473CE8E23B0B59500F119DF /* SWThemeCell.m */; };
+		0473CE9123B0B59500F119DF /* SWThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0473CE8F23B0B59500F119DF /* SWThemeCell.xib */; };
+		ECBF667A02CCA286C336B6B1 /* Pods_SWTextTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9722F90D00D8E508A5C8E83 /* Pods_SWTextTool.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0411273F23ADBB87008DB54F /* SWTextTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWTextTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0411274223ADBB87008DB54F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0411274323ADBB87008DB54F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0411274823ADBB87008DB54F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../ViewController.h; sourceTree = "<group>"; };
+		0411274923ADBB87008DB54F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../ViewController.m; sourceTree = "<group>"; };
+		0411274C23ADBB87008DB54F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0411274E23ADBB89008DB54F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0411275123ADBB89008DB54F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0411275323ADBB89008DB54F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0411275423ADBB89008DB54F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0411276023ADC03E008DB54F /* SWMainScorllerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMainScorllerView.h; sourceTree = "<group>"; };
+		0411276123ADC03E008DB54F /* SWMainScorllerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMainScorllerView.m; sourceTree = "<group>"; };
+		0411276323ADC068008DB54F /* SWBaseTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWBaseTextView.h; sourceTree = "<group>"; };
+		0411276423ADC068008DB54F /* SWBaseTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWBaseTextView.m; sourceTree = "<group>"; };
+		0411276723ADC123008DB54F /* NSString+KKStringDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KKStringDate.h"; sourceTree = "<group>"; };
+		0411276823ADC123008DB54F /* NSString+KKStringDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KKStringDate.m"; sourceTree = "<group>"; };
+		0411276B23ADC2DD008DB54F /* GYStickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYStickerView.h; sourceTree = "<group>"; };
+		0411276C23ADC2DD008DB54F /* image_btn_remove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_btn_remove@2x.png"; sourceTree = "<group>"; };
+		0411276D23ADC2DD008DB54F /* GYStickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYStickerView.m; sourceTree = "<group>"; };
+		0411276E23ADC2DD008DB54F /* image_btn_resize@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_btn_resize@2x.png"; sourceTree = "<group>"; };
+		0411276F23ADC2DD008DB54F /* image_btn_rotate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_btn_rotate@2x.png"; sourceTree = "<group>"; };
+		0411277523ADC35A008DB54F /* ListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
+		0411277623ADC35A008DB54F /* LabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabView.h; sourceTree = "<group>"; };
+		0411277723ADC35A008DB54F /* ListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
+		0411277823ADC35A008DB54F /* LabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabView.m; sourceTree = "<group>"; };
+		0411277B23ADC3A2008DB54F /* SWBaseLable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWBaseLable.h; sourceTree = "<group>"; };
+		0411277C23ADC3A2008DB54F /* SWBaseLable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWBaseLable.m; sourceTree = "<group>"; };
+		0411277E23ADC4F9008DB54F /* SWPickViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPickViewModel.h; sourceTree = "<group>"; };
+		0411277F23ADC4F9008DB54F /* SWPickViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWPickViewModel.m; sourceTree = "<group>"; };
+		0411278223ADC5A2008DB54F /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		0411278323ADC5A2008DB54F /* YZChatInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZChatInputView.m; sourceTree = "<group>"; };
+		0411278423ADC5A2008DB54F /* ChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatView.h; sourceTree = "<group>"; };
+		0411278523ADC5A2008DB54F /* YZChatInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZChatInputView.h; sourceTree = "<group>"; };
+		0411278623ADC5A2008DB54F /* ChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatView.m; sourceTree = "<group>"; };
+		0411278723ADC5A2008DB54F /* YZChatInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZChatInputView.xib; sourceTree = "<group>"; };
+		0411278C23ADC5FC008DB54F /* SWBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWBaseView.h; sourceTree = "<group>"; };
+		0411278D23ADC5FC008DB54F /* SWBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWBaseView.m; sourceTree = "<group>"; };
+		0411278F23ADC645008DB54F /* SWEditorBorderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWEditorBorderModel.h; sourceTree = "<group>"; };
+		0411279023ADC645008DB54F /* SWEditorBorderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWEditorBorderModel.m; sourceTree = "<group>"; };
+		0411279523ADC81B008DB54F /* SWTextTool.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTextTool.pch; sourceTree = "<group>"; };
+		041127A923ADECCD008DB54F /* SWViewFontModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWViewFontModel.h; sourceTree = "<group>"; };
+		041127AA23ADECCD008DB54F /* SWViewFontModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWViewFontModel.m; sourceTree = "<group>"; };
+		041127AC23ADEDBA008DB54F /* UIView+SWView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SWView.h"; sourceTree = "<group>"; };
+		041127AD23ADEDBA008DB54F /* UIView+SWView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SWView.m"; sourceTree = "<group>"; };
+		041127AF23ADF896008DB54F /* SWEditorToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWEditorToolView.h; sourceTree = "<group>"; };
+		041127B023ADF896008DB54F /* SWEditorToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWEditorToolView.m; sourceTree = "<group>"; };
+		041127B223ADFB69008DB54F /* SWKeyboardToolModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWKeyboardToolModel.h; sourceTree = "<group>"; };
+		041127B323ADFB69008DB54F /* SWKeyboardToolModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWKeyboardToolModel.m; sourceTree = "<group>"; };
+		041127B523ADFFF8008DB54F /* SWKeyboardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWKeyboardCell.h; sourceTree = "<group>"; };
+		041127B623ADFFF8008DB54F /* SWKeyboardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWKeyboardCell.m; sourceTree = "<group>"; };
+		041127B823AE0901008DB54F /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		041127B923AE0902008DB54F /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		041127C323AE0A1E008DB54F /* SWFontView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontView.h; sourceTree = "<group>"; };
+		041127C423AE0A1E008DB54F /* SWFontView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontView.m; sourceTree = "<group>"; };
+		041127C623AE10F5008DB54F /* SWFontBorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontBorder.h; sourceTree = "<group>"; };
+		041127C723AE10F5008DB54F /* SWFontBorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontBorder.m; sourceTree = "<group>"; };
+		041127C923AE1155008DB54F /* SWEditorBoderViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWEditorBoderViewModel.h; sourceTree = "<group>"; };
+		041127CA23AE1155008DB54F /* SWEditorBoderViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWEditorBoderViewModel.m; sourceTree = "<group>"; };
+		041127CD23AE11B8008DB54F /* YZNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZNetWorking.m; sourceTree = "<group>"; };
+		041127CE23AE11B8008DB54F /* YZNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZNetWorking.h; sourceTree = "<group>"; };
+		041127D623AE13CA008DB54F /* SWEditorBorderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWEditorBorderCell.h; sourceTree = "<group>"; };
+		041127D723AE13CA008DB54F /* SWEditorBorderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWEditorBorderCell.m; sourceTree = "<group>"; };
+		041127D823AE13CA008DB54F /* SWEditorBorderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWEditorBorderCell.xib; sourceTree = "<group>"; };
+		041127DB23AE1548008DB54F /* SWFontListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontListView.h; sourceTree = "<group>"; };
+		041127DC23AE1548008DB54F /* SWFontListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontListView.m; sourceTree = "<group>"; };
+		041127DF23AE15B0008DB54F /* SWFontModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontModel.h; sourceTree = "<group>"; };
+		041127E023AE15B0008DB54F /* SWFontModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontModel.m; sourceTree = "<group>"; };
+		041127E223AE1782008DB54F /* SWFontViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontViewModel.h; sourceTree = "<group>"; };
+		041127E323AE1782008DB54F /* SWFontViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontViewModel.m; sourceTree = "<group>"; };
+		041127E523AE18D7008DB54F /* SWFontStyleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontStyleCell.h; sourceTree = "<group>"; };
+		041127E623AE18D7008DB54F /* SWFontStyleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontStyleCell.m; sourceTree = "<group>"; };
+		041127E723AE18D7008DB54F /* SWFontStyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWFontStyleCell.xib; sourceTree = "<group>"; };
+		041127EB23AE1BDE008DB54F /* SWFontSizeSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontSizeSliderView.h; sourceTree = "<group>"; };
+		041127EC23AE1BDE008DB54F /* SWFontSizeSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontSizeSliderView.m; sourceTree = "<group>"; };
+		041127EF23AE1C17008DB54F /* PublicAudioPlayProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicAudioPlayProgressView.m; sourceTree = "<group>"; };
+		041127F023AE1C17008DB54F /* PublicAudioPlayProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicAudioPlayProgressView.h; sourceTree = "<group>"; };
+		041127F223AE1D34008DB54F /* SWFontFormatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontFormatView.h; sourceTree = "<group>"; };
+		041127F323AE1D34008DB54F /* SWFontFormatView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontFormatView.m; sourceTree = "<group>"; };
+		041127F523AE1D98008DB54F /* SWBaseFontFormaterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWBaseFontFormaterCell.h; sourceTree = "<group>"; };
+		041127F623AE1D98008DB54F /* SWBaseFontFormaterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWBaseFontFormaterCell.m; sourceTree = "<group>"; };
+		041127F823AE1E12008DB54F /* SWFontFormatterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontFormatterCell.h; sourceTree = "<group>"; };
+		041127F923AE1E12008DB54F /* SWFontFormatterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontFormatterCell.m; sourceTree = "<group>"; };
+		041127FB23AE1E9D008DB54F /* Other.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Other.h; sourceTree = "<group>"; };
+		041127FC23AE1EDB008DB54F /* SWFontSpaceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontSpaceCell.h; sourceTree = "<group>"; };
+		041127FD23AE1EDB008DB54F /* SWFontSpaceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontSpaceCell.m; sourceTree = "<group>"; };
+		041127FF23AE1F01008DB54F /* SWFontAligementCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontAligementCell.h; sourceTree = "<group>"; };
+		0411280023AE1F01008DB54F /* SWFontAligementCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontAligementCell.m; sourceTree = "<group>"; };
+		0411280223AE1F5F008DB54F /* SWFontSpceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontSpceModel.h; sourceTree = "<group>"; };
+		0411280323AE1F5F008DB54F /* SWFontSpceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontSpceModel.m; sourceTree = "<group>"; };
+		0411280523AE1FAA008DB54F /* SWFontSpaceNumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFontSpaceNumCell.h; sourceTree = "<group>"; };
+		0411280623AE1FAA008DB54F /* SWFontSpaceNumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFontSpaceNumCell.m; sourceTree = "<group>"; };
+		0411280723AE1FAA008DB54F /* SWFontSpaceNumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWFontSpaceNumCell.xib; sourceTree = "<group>"; };
+		0473CE7D23B0AABD00F119DF /* JRSandBoxPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSandBoxPath.h; sourceTree = "<group>"; };
+		0473CE7E23B0AABD00F119DF /* JRSandBoxPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSandBoxPath.m; sourceTree = "<group>"; };
+		0473CE8223B0B31800F119DF /* SWThemeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWThemeView.h; sourceTree = "<group>"; };
+		0473CE8323B0B31800F119DF /* SWThemeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWThemeView.m; sourceTree = "<group>"; };
+		0473CE8523B0B32500F119DF /* SWThemeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWThemeView.xib; sourceTree = "<group>"; };
+		0473CE8723B0B3DE00F119DF /* SWThemeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWThemeViewModel.h; sourceTree = "<group>"; };
+		0473CE8823B0B3DE00F119DF /* SWThemeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWThemeViewModel.m; sourceTree = "<group>"; };
+		0473CE8A23B0B40800F119DF /* SWThemeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWThemeModel.h; sourceTree = "<group>"; };
+		0473CE8B23B0B40800F119DF /* SWThemeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWThemeModel.m; sourceTree = "<group>"; };
+		0473CE8D23B0B59500F119DF /* SWThemeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWThemeCell.h; sourceTree = "<group>"; };
+		0473CE8E23B0B59500F119DF /* SWThemeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWThemeCell.m; sourceTree = "<group>"; };
+		0473CE8F23B0B59500F119DF /* SWThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWThemeCell.xib; sourceTree = "<group>"; };
+		CC815E960BCDC4378EF0EF87 /* Pods-SWTextTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWTextTool.release.xcconfig"; path = "Target Support Files/Pods-SWTextTool/Pods-SWTextTool.release.xcconfig"; sourceTree = "<group>"; };
+		DF1A51CB928C2A8DA6390B90 /* Pods-SWTextTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWTextTool.debug.xcconfig"; path = "Target Support Files/Pods-SWTextTool/Pods-SWTextTool.debug.xcconfig"; sourceTree = "<group>"; };
+		F9722F90D00D8E508A5C8E83 /* Pods_SWTextTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWTextTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0411273C23ADBB87008DB54F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECBF667A02CCA286C336B6B1 /* Pods_SWTextTool.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0411273623ADBB87008DB54F = {
+			isa = PBXGroup;
+			children = (
+				0411274123ADBB87008DB54F /* SWTextTool */,
+				0411274023ADBB87008DB54F /* Products */,
+				99F2D92042474B69C973B7F3 /* Pods */,
+				898558D5BC75083F1ECFF7CB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0411274023ADBB87008DB54F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0411273F23ADBB87008DB54F /* SWTextTool.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0411274123ADBB87008DB54F /* SWTextTool */ = {
+			isa = PBXGroup;
+			children = (
+				0411275B23ADBEE8008DB54F /* 编辑打印 */,
+				0411274223ADBB87008DB54F /* AppDelegate.h */,
+				0411274323ADBB87008DB54F /* AppDelegate.m */,
+				0411274B23ADBB87008DB54F /* Main.storyboard */,
+				0411274E23ADBB89008DB54F /* Assets.xcassets */,
+				0411275023ADBB89008DB54F /* LaunchScreen.storyboard */,
+				0411275323ADBB89008DB54F /* Info.plist */,
+				0411275423ADBB89008DB54F /* main.m */,
+			);
+			path = SWTextTool;
+			sourceTree = "<group>";
+		};
+		0411275B23ADBEE8008DB54F /* 编辑打印 */ = {
+			isa = PBXGroup;
+			children = (
+				041127CC23AE11B8008DB54F /* NetWork(网络请求) */,
+				0411278123ADC59C008DB54F /* 文本贴纸 */,
+				0411277423ADC35A008DB54F /* 表格贴纸 */,
+				0411276A23ADC2DD008DB54F /* 贴纸编辑 */,
+				0411276623ADC118008DB54F /* Category(类别) */,
+				0411275D23ADBF11008DB54F /* Controller */,
+				0411275E23ADBF11008DB54F /* Model */,
+				0411275C23ADBF11008DB54F /* View */,
+				0411275F23ADBF11008DB54F /* ViewModel */,
+				0411279523ADC81B008DB54F /* SWTextTool.pch */,
+				041127FB23AE1E9D008DB54F /* Other.h */,
+			);
+			path = "编辑打印";
+			sourceTree = "<group>";
+		};
+		0411275C23ADBF11008DB54F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				041127BC23AE09A4008DB54F /* MainView(主要) */,
+				041127BB23AE098F008DB54F /* keyboardManager(键盘管理) */,
+				0411277B23ADC3A2008DB54F /* SWBaseLable.h */,
+				0411277C23ADC3A2008DB54F /* SWBaseLable.m */,
+				0411278C23ADC5FC008DB54F /* SWBaseView.h */,
+				0411278D23ADC5FC008DB54F /* SWBaseView.m */,
+				041127B523ADFFF8008DB54F /* SWKeyboardCell.h */,
+				041127B623ADFFF8008DB54F /* SWKeyboardCell.m */,
+				041127F523AE1D98008DB54F /* SWBaseFontFormaterCell.h */,
+				041127F623AE1D98008DB54F /* SWBaseFontFormaterCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0411275D23ADBF11008DB54F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0411274823ADBB87008DB54F /* ViewController.h */,
+				0411274923ADBB87008DB54F /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0411275E23ADBF11008DB54F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0411277E23ADC4F9008DB54F /* SWPickViewModel.h */,
+				0411277F23ADC4F9008DB54F /* SWPickViewModel.m */,
+				0411278F23ADC645008DB54F /* SWEditorBorderModel.h */,
+				0411279023ADC645008DB54F /* SWEditorBorderModel.m */,
+				041127A923ADECCD008DB54F /* SWViewFontModel.h */,
+				041127AA23ADECCD008DB54F /* SWViewFontModel.m */,
+				041127B223ADFB69008DB54F /* SWKeyboardToolModel.h */,
+				041127B323ADFB69008DB54F /* SWKeyboardToolModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0411275F23ADBF11008DB54F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				041127C923AE1155008DB54F /* SWEditorBoderViewModel.h */,
+				041127CA23AE1155008DB54F /* SWEditorBoderViewModel.m */,
+				041127E223AE1782008DB54F /* SWFontViewModel.h */,
+				041127E323AE1782008DB54F /* SWFontViewModel.m */,
+				0473CE8723B0B3DE00F119DF /* SWThemeViewModel.h */,
+				0473CE8823B0B3DE00F119DF /* SWThemeViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0411276623ADC118008DB54F /* Category(类别) */ = {
+			isa = PBXGroup;
+			children = (
+				041127B923AE0902008DB54F /* UIView+Extension.h */,
+				041127B823AE0901008DB54F /* UIView+Extension.m */,
+				0411276723ADC123008DB54F /* NSString+KKStringDate.h */,
+				0411276823ADC123008DB54F /* NSString+KKStringDate.m */,
+				041127AC23ADEDBA008DB54F /* UIView+SWView.h */,
+				041127AD23ADEDBA008DB54F /* UIView+SWView.m */,
+			);
+			path = "Category(类别)";
+			sourceTree = "<group>";
+		};
+		0411276A23ADC2DD008DB54F /* 贴纸编辑 */ = {
+			isa = PBXGroup;
+			children = (
+				0411276B23ADC2DD008DB54F /* GYStickerView.h */,
+				0411276C23ADC2DD008DB54F /* image_btn_remove@2x.png */,
+				0411276D23ADC2DD008DB54F /* GYStickerView.m */,
+				0411276E23ADC2DD008DB54F /* image_btn_resize@2x.png */,
+				0411276F23ADC2DD008DB54F /* image_btn_rotate@2x.png */,
+			);
+			path = "贴纸编辑";
+			sourceTree = "<group>";
+		};
+		0411277423ADC35A008DB54F /* 表格贴纸 */ = {
+			isa = PBXGroup;
+			children = (
+				0411277723ADC35A008DB54F /* ListItem.h */,
+				0411277523ADC35A008DB54F /* ListItem.m */,
+				0411277623ADC35A008DB54F /* LabView.h */,
+				0411277823ADC35A008DB54F /* LabView.m */,
+			);
+			path = "表格贴纸";
+			sourceTree = "<group>";
+		};
+		0411278123ADC59C008DB54F /* 文本贴纸 */ = {
+			isa = PBXGroup;
+			children = (
+				0411278223ADC5A2008DB54F /* 2.png */,
+				0411278423ADC5A2008DB54F /* ChatView.h */,
+				0411278623ADC5A2008DB54F /* ChatView.m */,
+				0411278523ADC5A2008DB54F /* YZChatInputView.h */,
+				0411278323ADC5A2008DB54F /* YZChatInputView.m */,
+				0411278723ADC5A2008DB54F /* YZChatInputView.xib */,
+			);
+			path = "文本贴纸";
+			sourceTree = "<group>";
+		};
+		041127BB23AE098F008DB54F /* keyboardManager(键盘管理) */ = {
+			isa = PBXGroup;
+			children = (
+				0473CE7C23B0AABD00F119DF /* 沙盒管理 */,
+				041127BF23AE0A0D008DB54F /* 表格视图 */,
+				041127C023AE0A0D008DB54F /* 表情视图 */,
+				041127BE23AE0A0D008DB54F /* 文本视图 */,
+				041127BD23AE0A0D008DB54F /* 文本素材 */,
+				041127C123AE0A0D008DB54F /* 主题视图 */,
+				041127C223AE0A0D008DB54F /* 字体大小 */,
+			);
+			path = "keyboardManager(键盘管理)";
+			sourceTree = "<group>";
+		};
+		041127BC23AE09A4008DB54F /* MainView(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				0411276323ADC068008DB54F /* SWBaseTextView.h */,
+				0411276423ADC068008DB54F /* SWBaseTextView.m */,
+				0411276023ADC03E008DB54F /* SWMainScorllerView.h */,
+				0411276123ADC03E008DB54F /* SWMainScorllerView.m */,
+				041127AF23ADF896008DB54F /* SWEditorToolView.h */,
+				041127B023ADF896008DB54F /* SWEditorToolView.m */,
+			);
+			path = "MainView(主要)";
+			sourceTree = "<group>";
+		};
+		041127BD23AE0A0D008DB54F /* 文本素材 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "文本素材";
+			sourceTree = "<group>";
+		};
+		041127BE23AE0A0D008DB54F /* 文本视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "文本视图";
+			sourceTree = "<group>";
+		};
+		041127BF23AE0A0D008DB54F /* 表格视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "表格视图";
+			sourceTree = "<group>";
+		};
+		041127C023AE0A0D008DB54F /* 表情视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "表情视图";
+			sourceTree = "<group>";
+		};
+		041127C123AE0A0D008DB54F /* 主题视图 */ = {
+			isa = PBXGroup;
+			children = (
+				0473CE8123B0B2E700F119DF /* Cell */,
+				0473CE8023B0B2E700F119DF /* Model */,
+				0473CE8223B0B31800F119DF /* SWThemeView.h */,
+				0473CE8323B0B31800F119DF /* SWThemeView.m */,
+				0473CE8523B0B32500F119DF /* SWThemeView.xib */,
+			);
+			path = "主题视图";
+			sourceTree = "<group>";
+		};
+		041127C223AE0A0D008DB54F /* 字体大小 */ = {
+			isa = PBXGroup;
+			children = (
+				041127EA23AE1BD4008DB54F /* 字体滑杆 */,
+				041127DE23AE15A8008DB54F /* Model */,
+				041127D023AE1330008DB54F /* Cell */,
+				041127C323AE0A1E008DB54F /* SWFontView.h */,
+				041127C423AE0A1E008DB54F /* SWFontView.m */,
+				041127C623AE10F5008DB54F /* SWFontBorder.h */,
+				041127C723AE10F5008DB54F /* SWFontBorder.m */,
+				041127DB23AE1548008DB54F /* SWFontListView.h */,
+				041127DC23AE1548008DB54F /* SWFontListView.m */,
+				041127F223AE1D34008DB54F /* SWFontFormatView.h */,
+				041127F323AE1D34008DB54F /* SWFontFormatView.m */,
+			);
+			path = "字体大小";
+			sourceTree = "<group>";
+		};
+		041127CC23AE11B8008DB54F /* NetWork(网络请求) */ = {
+			isa = PBXGroup;
+			children = (
+				041127CD23AE11B8008DB54F /* YZNetWorking.m */,
+				041127CE23AE11B8008DB54F /* YZNetWorking.h */,
+			);
+			path = "NetWork(网络请求)";
+			sourceTree = "<group>";
+		};
+		041127D023AE1330008DB54F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				041127D623AE13CA008DB54F /* SWEditorBorderCell.h */,
+				041127D723AE13CA008DB54F /* SWEditorBorderCell.m */,
+				041127D823AE13CA008DB54F /* SWEditorBorderCell.xib */,
+				041127E523AE18D7008DB54F /* SWFontStyleCell.h */,
+				041127E623AE18D7008DB54F /* SWFontStyleCell.m */,
+				041127E723AE18D7008DB54F /* SWFontStyleCell.xib */,
+				0411280523AE1FAA008DB54F /* SWFontSpaceNumCell.h */,
+				0411280623AE1FAA008DB54F /* SWFontSpaceNumCell.m */,
+				0411280723AE1FAA008DB54F /* SWFontSpaceNumCell.xib */,
+				041127F823AE1E12008DB54F /* SWFontFormatterCell.h */,
+				041127F923AE1E12008DB54F /* SWFontFormatterCell.m */,
+				041127FC23AE1EDB008DB54F /* SWFontSpaceCell.h */,
+				041127FD23AE1EDB008DB54F /* SWFontSpaceCell.m */,
+				041127FF23AE1F01008DB54F /* SWFontAligementCell.h */,
+				0411280023AE1F01008DB54F /* SWFontAligementCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		041127DE23AE15A8008DB54F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				041127DF23AE15B0008DB54F /* SWFontModel.h */,
+				041127E023AE15B0008DB54F /* SWFontModel.m */,
+				0411280223AE1F5F008DB54F /* SWFontSpceModel.h */,
+				0411280323AE1F5F008DB54F /* SWFontSpceModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		041127EA23AE1BD4008DB54F /* 字体滑杆 */ = {
+			isa = PBXGroup;
+			children = (
+				041127EE23AE1C17008DB54F /* Slider(滑杆) */,
+				041127EB23AE1BDE008DB54F /* SWFontSizeSliderView.h */,
+				041127EC23AE1BDE008DB54F /* SWFontSizeSliderView.m */,
+			);
+			path = "字体滑杆";
+			sourceTree = "<group>";
+		};
+		041127EE23AE1C17008DB54F /* Slider(滑杆) */ = {
+			isa = PBXGroup;
+			children = (
+				041127EF23AE1C17008DB54F /* PublicAudioPlayProgressView.m */,
+				041127F023AE1C17008DB54F /* PublicAudioPlayProgressView.h */,
+			);
+			path = "Slider(滑杆)";
+			sourceTree = "<group>";
+		};
+		0473CE7C23B0AABD00F119DF /* 沙盒管理 */ = {
+			isa = PBXGroup;
+			children = (
+				0473CE7D23B0AABD00F119DF /* JRSandBoxPath.h */,
+				0473CE7E23B0AABD00F119DF /* JRSandBoxPath.m */,
+			);
+			path = "沙盒管理";
+			sourceTree = "<group>";
+		};
+		0473CE8023B0B2E700F119DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0473CE8A23B0B40800F119DF /* SWThemeModel.h */,
+				0473CE8B23B0B40800F119DF /* SWThemeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0473CE8123B0B2E700F119DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0473CE8D23B0B59500F119DF /* SWThemeCell.h */,
+				0473CE8E23B0B59500F119DF /* SWThemeCell.m */,
+				0473CE8F23B0B59500F119DF /* SWThemeCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		898558D5BC75083F1ECFF7CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9722F90D00D8E508A5C8E83 /* Pods_SWTextTool.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99F2D92042474B69C973B7F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF1A51CB928C2A8DA6390B90 /* Pods-SWTextTool.debug.xcconfig */,
+				CC815E960BCDC4378EF0EF87 /* Pods-SWTextTool.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0411273E23ADBB87008DB54F /* SWTextTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0411275823ADBB89008DB54F /* Build configuration list for PBXNativeTarget "SWTextTool" */;
+			buildPhases = (
+				164D8AA92DF1F816778B7B2F /* [CP] Check Pods Manifest.lock */,
+				0411273B23ADBB87008DB54F /* Sources */,
+				0411273C23ADBB87008DB54F /* Frameworks */,
+				0411273D23ADBB87008DB54F /* Resources */,
+				B58AEECFCD86DA15BC71C10C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SWTextTool;
+			productName = SWTextTool;
+			productReference = 0411273F23ADBB87008DB54F /* SWTextTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0411273723ADBB87008DB54F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = sw;
+				TargetAttributes = {
+					0411273E23ADBB87008DB54F = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 0411273A23ADBB87008DB54F /* Build configuration list for PBXProject "SWTextTool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0411273623ADBB87008DB54F;
+			productRefGroup = 0411274023ADBB87008DB54F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0411273E23ADBB87008DB54F /* SWTextTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0411273D23ADBB87008DB54F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0411277323ADC2DD008DB54F /* image_btn_rotate@2x.png in Resources */,
+				0411275223ADBB89008DB54F /* LaunchScreen.storyboard in Resources */,
+				0411278B23ADC5A2008DB54F /* YZChatInputView.xib in Resources */,
+				0411280923AE1FAA008DB54F /* SWFontSpaceNumCell.xib in Resources */,
+				0473CE8623B0B32500F119DF /* SWThemeView.xib in Resources */,
+				0411278823ADC5A2008DB54F /* 2.png in Resources */,
+				041127E923AE18D7008DB54F /* SWFontStyleCell.xib in Resources */,
+				041127DA23AE13CA008DB54F /* SWEditorBorderCell.xib in Resources */,
+				0411274F23ADBB89008DB54F /* Assets.xcassets in Resources */,
+				0411274D23ADBB87008DB54F /* Main.storyboard in Resources */,
+				0411277023ADC2DD008DB54F /* image_btn_remove@2x.png in Resources */,
+				0473CE9123B0B59500F119DF /* SWThemeCell.xib in Resources */,
+				0411277223ADC2DD008DB54F /* image_btn_resize@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		164D8AA92DF1F816778B7B2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWTextTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B58AEECFCD86DA15BC71C10C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWTextTool/Pods-SWTextTool-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWTextTool/Pods-SWTextTool-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SWTextTool/Pods-SWTextTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0411273B23ADBB87008DB54F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0411277A23ADC35A008DB54F /* LabView.m in Sources */,
+				041127AE23ADEDBA008DB54F /* UIView+SWView.m in Sources */,
+				041127B723ADFFF8008DB54F /* SWKeyboardCell.m in Sources */,
+				041127F723AE1D98008DB54F /* SWBaseFontFormaterCell.m in Sources */,
+				041127CF23AE11B8008DB54F /* YZNetWorking.m in Sources */,
+				0411280823AE1FAA008DB54F /* SWFontSpaceNumCell.m in Sources */,
+				041127E823AE18D7008DB54F /* SWFontStyleCell.m in Sources */,
+				041127BA23AE0902008DB54F /* UIView+Extension.m in Sources */,
+				041127CB23AE1155008DB54F /* SWEditorBoderViewModel.m in Sources */,
+				0411278A23ADC5A2008DB54F /* ChatView.m in Sources */,
+				041127FE23AE1EDB008DB54F /* SWFontSpaceCell.m in Sources */,
+				0411278023ADC4F9008DB54F /* SWPickViewModel.m in Sources */,
+				0411278923ADC5A2008DB54F /* YZChatInputView.m in Sources */,
+				0411280123AE1F01008DB54F /* SWFontAligementCell.m in Sources */,
+				0411277923ADC35A008DB54F /* ListItem.m in Sources */,
+				0411276523ADC068008DB54F /* SWBaseTextView.m in Sources */,
+				0411279123ADC645008DB54F /* SWEditorBorderModel.m in Sources */,
+				0411274A23ADBB87008DB54F /* ViewController.m in Sources */,
+				041127FA23AE1E12008DB54F /* SWFontFormatterCell.m in Sources */,
+				041127E423AE1782008DB54F /* SWFontViewModel.m in Sources */,
+				041127F123AE1C17008DB54F /* PublicAudioPlayProgressView.m in Sources */,
+				0473CE9023B0B59500F119DF /* SWThemeCell.m in Sources */,
+				0411276923ADC123008DB54F /* NSString+KKStringDate.m in Sources */,
+				041127AB23ADECCD008DB54F /* SWViewFontModel.m in Sources */,
+				041127DD23AE1548008DB54F /* SWFontListView.m in Sources */,
+				0473CE8423B0B31800F119DF /* SWThemeView.m in Sources */,
+				0411274423ADBB87008DB54F /* AppDelegate.m in Sources */,
+				041127C823AE10F5008DB54F /* SWFontBorder.m in Sources */,
+				0473CE7F23B0AABD00F119DF /* JRSandBoxPath.m in Sources */,
+				0411275523ADBB89008DB54F /* main.m in Sources */,
+				0411277D23ADC3A2008DB54F /* SWBaseLable.m in Sources */,
+				0411280423AE1F5F008DB54F /* SWFontSpceModel.m in Sources */,
+				0411278E23ADC5FC008DB54F /* SWBaseView.m in Sources */,
+				0473CE8923B0B3DE00F119DF /* SWThemeViewModel.m in Sources */,
+				041127ED23AE1BDE008DB54F /* SWFontSizeSliderView.m in Sources */,
+				0473CE8C23B0B40800F119DF /* SWThemeModel.m in Sources */,
+				041127F423AE1D34008DB54F /* SWFontFormatView.m in Sources */,
+				041127B123ADF896008DB54F /* SWEditorToolView.m in Sources */,
+				041127B423ADFB69008DB54F /* SWKeyboardToolModel.m in Sources */,
+				041127D923AE13CA008DB54F /* SWEditorBorderCell.m in Sources */,
+				0411277123ADC2DD008DB54F /* GYStickerView.m in Sources */,
+				0411276223ADC03E008DB54F /* SWMainScorllerView.m in Sources */,
+				041127E123AE15B0008DB54F /* SWFontModel.m in Sources */,
+				041127C523AE0A1E008DB54F /* SWFontView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0411274B23ADBB87008DB54F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0411274C23ADBB87008DB54F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0411275023ADBB89008DB54F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0411275123ADBB89008DB54F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0411275623ADBB89008DB54F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0411275723ADBB89008DB54F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0411275923ADBB89008DB54F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF1A51CB928C2A8DA6390B90 /* Pods-SWTextTool.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6Y5SA2BUN;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SWTextTool/编辑打印/SWTextTool.pch";
+				INFOPLIST_FILE = SWTextTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sw.SWTextTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0411275A23ADBB89008DB54F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC815E960BCDC4378EF0EF87 /* Pods-SWTextTool.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6Y5SA2BUN;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SWTextTool/编辑打印/SWTextTool.pch";
+				INFOPLIST_FILE = SWTextTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sw.SWTextTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0411273A23ADBB87008DB54F /* Build configuration list for PBXProject "SWTextTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0411275623ADBB89008DB54F /* Debug */,
+				0411275723ADBB89008DB54F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0411275823ADBB89008DB54F /* Build configuration list for PBXNativeTarget "SWTextTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0411275923ADBB89008DB54F /* Debug */,
+				0411275A23ADBB89008DB54F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0411273723ADBB87008DB54F /* Project object */;
+}

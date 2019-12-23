@@ -1,0 +1,6 @@
+framework module Pods_SWTextTool {
+  umbrella header "Pods-SWTextTool-umbrella.h"
+
+  export *
+  module * { export * }
+}

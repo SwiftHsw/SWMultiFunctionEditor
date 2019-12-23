@@ -1,0 +1,131 @@
+//
+//  SWTextTool.pch
+//  SWTextTool
+//
+//  Created by 帅到不行 on 2019/12/21.
+//  Copyright © 2019 sw. All rights reserved.
+//
+
+#ifndef SWTextTool_pch
+#define SWTextTool_pch
+
+//接口
+#define WEBAPI_SERVER @"http://admin.ileadtek.com/public/index.php/api"
+
+///文本素材
+#define RobotText [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"Robot",@"text"]
+///字体
+#define RobotTff [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"Robot",@"ttf"]
+///表情
+#define Emoticon [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"Robot",@"emoticon"]
+///主题
+#define Theme [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"Robot",@"theme"]
+///便利清单
+#define Sticky [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"Robot",@"sticky"]
+///web首页
+#define webHome [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"web",@"index"]
+///删除网页
+#define deleteWeb [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"web",@"web_delete"]
+///删除网页分区
+#define deleteSetionWeb [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"web",@"tag_delete"]
+///增加分区
+#define addWebSetion [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"web",@"tag_add"]
+///增加网页
+#define addWeb [NSString stringWithFormat:@"%@/%@/%@",WEBAPI_SERVER,@"web",@"web_add"]
+
+
+//颜色
+#define bg_color [SWKit colorWithHexString:@"#f5f5f5"]
+
+#define boder_color [SWKit colorWithHexString:@"#f5f5f5"]
+
+#define boder_color_cg [SWKit colorWithHexString:@"#f5f5f5"].CGColor
+
+
+#define KClearColor [UIColor clearColor]
+
+#define KWhiteColor [UIColor whiteColor]
+
+#define KBlackColor [UIColor blackColor]
+
+#define KGrayColor [UIColor grayColor]
+
+#define KGray2Color [UIColor lightGrayColor]
+
+#define KBlueColor [UIColor blueColor]
+
+#define KRedColor [UIColor redColor]
+
+//通知
+
+///插入文字贴纸
+#define INSERTTEXT      @"insertTextStickers"
+///插入表格
+#define INSERFORM      @"insertFormStickers"
+///插入表情
+#define INSEREMOJI     @"insertEmojitickers"
+///修改字体大小
+#define CHNAGEFONT     @"changEditorFont"
+///修改字体
+#define CHNAGEFONTSTYLE    @"changEditorFontStyle"
+///字体格式
+#define FONTFOMMATER    @"fontFommater"
+///字体对齐
+#define FONTALIGMENT    @"textAligment"
+///行间距
+#define FONTROWMAGIN    @"textRowMagin"
+///行间距
+#define UPDATEFROM    @"updatForm"
+///插入主题
+#define INSERTTHEME    @"insertTheme"
+
+
+//常量
+ // 就是chatBox的高度
+#define KHeight_Tabar      50
+/**
+ 间距插入素材和素材之间
+ */
+#define pointMagin 25
+// 就是chatBox的高度
+#define keyBoxHeight      210
+
+//文件下载
+#define FontName @"FontName"
+
+//获取屏幕宽高
+
+#define KScreenWidth [[UIScreen mainScreen]bounds].size.width
+
+#define KScreenHeight [[UIScreen mainScreen]bounds].size.height
+
+#define  kNoti    [NSNotificationCenter defaultCenter]
+ 
+
+
+
+#import "UIView+SWView.h"
+
+//#import <MJRefresh.h>
+#import <MJExtension.h>
+#import <SDAutoLayout.h>
+//#import <OpenAL/OpenAL.h>
+#import "IQKeyboardManager.h"
+#import <SVProgressHUD.h>
+//#import <JPImageresizerView.h>
+#import <ReactiveObjC.h>
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
+#import <UIImageView+WebCache.h>
+#import <SWKit.h>
+//#import <YYKit.h>
+//#import <JXCategoryView.h>
+//#import <LYSideslipCell.h>
+#import "UIView+Extension.h"
+#import "YZNetWorking.h"
+#import "Other.h"
+#import "JRSandBoxPath.h"
+#import <SDImageCache.h>
+#import <SDWebImageDownloader.h>
+
+#endif /* SWTextTool_pch */

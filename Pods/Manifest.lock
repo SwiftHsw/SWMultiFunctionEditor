@@ -1,0 +1,60 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - IQKeyboardManager (6.5.3)
+  - MJExtension (3.2.1)
+  - ReactiveObjC (3.1.1)
+  - SDAutoLayout (2.2.1)
+  - SDWebImage (5.2.5):
+    - SDWebImage/Core (= 5.2.5)
+  - SDWebImage/Core (5.2.5)
+  - SVProgressHUD (2.2.5)
+  - SWKit (1.1.7)
+
+DEPENDENCIES:
+  - AFNetworking
+  - IQKeyboardManager
+  - MJExtension
+  - ReactiveObjC (~> 3.1.1)
+  - SDAutoLayout
+  - SDWebImage
+  - SVProgressHUD
+  - SWKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - IQKeyboardManager
+    - MJExtension
+    - ReactiveObjC
+    - SDAutoLayout
+    - SDWebImage
+    - SVProgressHUD
+    - SWKit
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  IQKeyboardManager: c2f901164d56807a35788483584d09fa69192e8e
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
+  SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SWKit: 76de52be5593d87eff6dcf07874579c5b12943b9
+
+PODFILE CHECKSUM: 1104984edcdf0f84f46af2083a2d1d37b171a5ec
+
+COCOAPODS: 1.7.5
