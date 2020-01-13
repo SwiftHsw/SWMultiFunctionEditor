@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" rowHeight="147" id="KGk-i7-Jjw" customClass="YZFaceIndexCell">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="147"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="304" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZZg-5z-TPQ">
+                        <rect key="frame" x="10" y="10" width="284" height="127"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZZg-5z-TPQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="K5R-bY-was"/>
+                    <constraint firstAttribute="trailing" secondItem="ZZg-5z-TPQ" secondAttribute="trailing" constant="10" id="Z03-3P-fsr"/>
+                    <constraint firstItem="ZZg-5z-TPQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kWS-zV-pft"/>
+                    <constraint firstAttribute="bottom" secondItem="ZZg-5z-TPQ" secondAttribute="bottom" constant="10" id="rEZ-87-01X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="icon" destination="ZZg-5z-TPQ" id="Q9a-TV-DvV"/>
+            </connections>
+            <point key="canvasLocation" x="126.08695652173914" y="171.09375"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BHAboutUsViewController">
+            <connections>
+                <outlet property="imgeIcon" destination="ohN-1N-tth" id="mvT-Xy-T4R"/>
+                <outlet property="versionLab" destination="GOk-dx-Vkz" id="f8a-vd-Mfg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ohN-1N-tth">
+                    <rect key="frame" x="152.5" y="70" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="vfA-0F-k4B"/>
+                        <constraint firstAttribute="width" constant="70" id="ztD-oz-gaj"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本号:V1.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOk-dx-Vkz">
+                    <rect key="frame" x="15" y="233" width="345" height="14.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14.5" id="WPB-gp-1ut"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr1-Qv-pga">
+                    <rect key="frame" x="40" y="155" width="295" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="KzV-re-Uyr"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="本印助手APP，是艾腾云旗下的一款产品，该产品提供丰富多彩的编辑内容，让用户体验的好，享受更多的编辑精彩，快来体验吧～">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright @2020 本印助手" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUT-bg-W2M">
+                    <rect key="frame" x="13" y="624" width="349" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="DYW-HA-UYG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Kr1-Qv-pga" firstAttribute="top" secondItem="ohN-1N-tth" secondAttribute="bottom" constant="15" id="3Di-36-Qg1"/>
+                <constraint firstAttribute="bottom" secondItem="wUT-bg-W2M" secondAttribute="bottom" constant="20" id="3Lr-Pa-B9J"/>
+                <constraint firstAttribute="trailing" secondItem="Kr1-Qv-pga" secondAttribute="trailing" constant="40" id="3ci-9d-sxW"/>
+                <constraint firstItem="Kr1-Qv-pga" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="6h4-Uf-muO"/>
+                <constraint firstItem="ohN-1N-tth" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="DKf-ck-ngl"/>
+                <constraint firstAttribute="trailing" secondItem="wUT-bg-W2M" secondAttribute="trailing" constant="13" id="RoE-PN-wrF"/>
+                <constraint firstItem="ohN-1N-tth" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="S1e-po-2JE"/>
+                <constraint firstAttribute="trailing" secondItem="GOk-dx-Vkz" secondAttribute="trailing" constant="15" id="a5q-fn-hqI"/>
+                <constraint firstItem="GOk-dx-Vkz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="f9e-qN-VQq"/>
+                <constraint firstItem="wUT-bg-W2M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="13" id="gMg-dx-zJF"/>
+                <constraint firstItem="GOk-dx-Vkz" firstAttribute="top" secondItem="Kr1-Qv-pga" secondAttribute="bottom" constant="8" id="wt4-91-nxT"/>
+            </constraints>
+            <point key="canvasLocation" x="24.800000000000001" y="-39.130434782608695"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="1024" height="1024"/>
+    </resources>
+</document>

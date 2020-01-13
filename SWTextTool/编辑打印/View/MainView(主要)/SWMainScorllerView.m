@@ -8,12 +8,12 @@
 
 #import "SWMainScorllerView.h"
 #import "ChatView.h"
-#import "GYStickerView.h"
+
 #import "LabView.h"
 #import <CoreText/CoreText.h>
-
+ 
 @interface SWMainScorllerView ()<UITextViewDelegate,GYStickerViewDelegate>{
-      GYStickerView * _oldStickerView;
+     
 }
 @property (nonatomic , assign)BOOL isClickMe;
 /**
@@ -90,6 +90,8 @@
     
      ///更新主题坐标
     [self upDataBoderFrame];
+    
+
 }
 
 
@@ -174,20 +176,23 @@
     ///修改值
        GYStickerView *stickerView = [[GYStickerView alloc] initWithContentView:contentView];
        ///表格取消旋转
+    if ([contentView isKindOfClass:[ChatView class]]) {
+        stickerView.width = SCREEN_WIDTH - 70;
+        stickerView.x = 25;
+    }
        stickerView.ctrlType =[contentView isKindOfClass:[LabView class]]?GYStickerViewCtrlTypeNoRotation:GYStickerViewCtrlTypeGesture;
        stickerView.scaleMode = GYStickerViewScaleModeTransform;
        stickerView.delegate  =self;
        stickerView.tag = contentView.tag;
        stickerView.userInteractionEnabled = [contentView isKindOfClass:[LabView class]];
-       stickerView.minItemWidth = 150;
+//       stickerView.minItemWidth = Is_Iphone_X ? 150 : 120;
        ////表格的时候需要自由缩放
        stickerView.scaleFit = ![contentView isKindOfClass:[LabView class]];
        [stickerView showOriginalPoint:YES];
        [stickerView setTransformCtrlImage:[UIImage imageNamed:@"image_btn_resize"]];
        [stickerView setResizeCtrlImage:[UIImage imageNamed:@"image_btn_resize"] rotateCtrlImage:[UIImage imageNamed:@"image_btn_rotate"]];
-       [stickerView setRemoveCtrlImage:[UIImage imageNamed:@"image_btn_rotate"]];
+       [stickerView setRemoveCtrlImage:[UIImage imageNamed:@"image_btn_remove"]];
        [self addSubview:stickerView];
-    
     
     
     ///把坐标放进字典
@@ -285,14 +290,54 @@
             
             ///增加滚动的范围值
                [self setContentSize:CGSizeMake(self.width, [self getContentHeight])];
-                  
-            
+ 
            }
  
     }
  
     
 }
+
+/**
+ 创建一个表情
+ 
+ @param img 配置内容
+ */
+- (void)creatEmojiStickers:(UIImage*)img{
+    
+    NSString *path_sandox = NSHomeDirectory();
+
+      //设置一个图片的存储路径
+
+      NSString *imagePath = [path_sandox stringByAppendingString:@"/Documents/test.png"];
+      //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
+      [UIImagePNGRepresentation(img) writeToFile:imagePath atomically:YES];
+
+    NSLog(@"%@",imagePath);
+    
+    ///创建表情图片
+    UIImageView * emoji= [[UIImageView alloc] initWithFrame:CGRectMake(self.center.x-90, [self getMaxY], 180, 180)];
+    emoji.image = img;
+    emoji.tag = self.pointDictionary.count;
+    [self addStickerViewWithContentView:emoji];
+    
+}
+
+///创建图片
+- (void)creatImages:(NSArray*)info{
+    ///循环创建图片
+    for (UIImage * img in info) {
+        //比例缩放
+//        CGSize size = CGSizeMake(200, model.highDefinitionImage.size.height);
+        UIImage * image = [self imageCompressForWidthScale:img targetWidth:200];
+        ///创建表情图片
+        UIImageView * emoji= [[UIImageView alloc] initWithFrame:CGRectMake(self.center.x-100, [self getMaxY], 200, image.size.height)];
+        emoji.image = image;
+        emoji.tag = self.pointDictionary.count;
+        [self addStickerViewWithContentView:emoji];
+    }
+}
+
 #pragma mark - 字体样式设置
 - (void)formatterTextView{
     
@@ -548,6 +593,60 @@
     [[NSUserDefaults standardUserDefaults]setObject:fontName forKey:@"123"];
     return font;
 }
-
+-(UIImage *) imageCompressForWidthScale:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth{
+    UIImage *newImage = nil;
+    CGSize imageSize = sourceImage.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    CGFloat targetWidth = defineWidth;
+    CGFloat targetHeight = height / (width / targetWidth);
+    CGSize size = CGSizeMake(targetWidth, targetHeight);
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    CGPoint thumbnailPoint = CGPointMake(0.0, 0.0);
+    
+    if(CGSizeEqualToSize(imageSize, size) == NO){
+        
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        
+        if(widthFactor > heightFactor){
+            scaleFactor = widthFactor;
+        }
+        else{
+            scaleFactor = heightFactor;
+        }
+        scaledWidth = width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        
+        if(widthFactor > heightFactor){
+            
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+            
+        }else if(widthFactor < heightFactor){
+            
+            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+        }
+    }
+    
+    UIGraphicsBeginImageContext(size);
+    
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width = scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    if(newImage == nil){
+        
+        NSLog(@"scale image fail");
+    }
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 @end

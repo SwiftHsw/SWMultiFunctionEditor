@@ -95,14 +95,17 @@
 - (UIButton *)addFontBtn{
     if (!_addFontBtn) {
         _addFontBtn =[[UIButton alloc]init];
-        _addFontBtn.backgroundColor =[SWKit randomColor];
+        [_addFontBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_addFontBtn setTitle:@"+" forState:UIControlStateNormal];;
     }
     return _addFontBtn;
 }
 - (UIButton *)subFontBtn{
     if (!_subFontBtn) {
         _subFontBtn =[[UIButton alloc]init];
-        _subFontBtn.backgroundColor =[SWKit randomColor];
+//        _subFontBtn.backgroundColor =[SWKit randomColor];
+        [_subFontBtn setTitle:@"-" forState:UIControlStateNormal];;
+        [_subFontBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
     return _subFontBtn;
 }

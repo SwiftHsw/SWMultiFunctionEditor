@@ -22,23 +22,25 @@
        CGImageRef imageTopRef =CGImageCreateWithImageInRect([backGroundimage CGImage], rects);
        UIImage *imageTop = [UIImage imageWithCGImage:imageTopRef];
       
-       
-       
+    
        ///底部图片
        rects = CGRectMake(0, backGroundimage.size.height-self.ios_tail_px *scaleH, backGroundimage.size.width,self.ios_tail_px*scaleSize);
        CGImageRef imagebottomRef =CGImageCreateWithImageInRect([backGroundimage CGImage], rects);
        UIImage *imageBottom = [UIImage imageWithCGImage:imagebottomRef];
     
-    
-    
+ 
        ///中间图片
         CGFloat centerY=backGroundimage.size.height-self.ios_head_px-self.ios_tail_px;
         rects = CGRectMake(0, self.ios_head_px+centerY/2-self.ios_middle_px/2, backGroundimage.size.width, self.ios_middle_px);
         CGImageRef imageCenterRef =CGImageCreateWithImageInRect([backGroundimage CGImage], rects);
         UIImage *imageCenter = [UIImage imageWithCGImage:imageCenterRef];
-      
-      return @{@"top":imageTop,@"center":imageCenter,@"bttom":imageBottom};
     
+        //防止崩溃
+        if (imageTop && imageCenter && imageBottom) {
+            return @{@"top":imageTop,@"center":imageCenter,@"bttom":imageBottom};
+        }else{
+            return @{@"top":[UIImage new],@"center":[UIImage new],@"bttom":[UIImage new]};
+        }
 }
 
 - (UIImage *)scaleImage:(UIImage *)image toScale:(CGFloat)scaleSize{

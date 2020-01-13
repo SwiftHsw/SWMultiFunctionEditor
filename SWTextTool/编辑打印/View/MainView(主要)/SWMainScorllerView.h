@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "SWBaseTextView.h"
 #import "SWEditorBorderModel.h"
-
+#import "GYStickerView.h"
 //主空间
 NS_ASSUME_NONNULL_BEGIN
 @class GYStickerView;
 
 @interface SWMainScorllerView : UIScrollView
+
+ @property (nonatomic,strong) GYStickerView * oldStickerView;
+
 /**
  总输入框
  */
@@ -89,6 +92,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// 创建主题边框
 /// @param dict 边框信息
 -(void)creatTheme:(NSDictionary*)dict;
+
+/**
+ 创建一个表情
+ 
+ @param img 配置内容
+ */
+- (void)creatEmojiStickers:(UIImage*)img;
+
+/// 创建图片
+/// @param info 图片模型数组
+- (void)creatImages:(NSArray*)info;
+
 
 @end
 

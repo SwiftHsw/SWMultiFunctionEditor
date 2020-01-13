@@ -71,7 +71,6 @@
         self.scaleFit = YES;
         
         [self addGestureRecognizer:self.panGesture];//添加拖动手势，所有模式通用
-   
         
 
     }

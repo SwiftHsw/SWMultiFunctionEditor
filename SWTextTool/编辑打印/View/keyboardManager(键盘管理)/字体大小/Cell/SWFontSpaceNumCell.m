@@ -14,7 +14,7 @@
      _model= model;
      self.number.text = model.titile;
      
-     self.backgroundColor = model.isSelect ?[UIColor greenColor]:[SWKit colorWithHexString:@"#f5f5f5"];
+     self.backgroundColor = model.isSelect ?[SWKit colorWithHexString:@"#00DD98"]:[SWKit colorWithHexString:@"#999999"];
   
  }
 

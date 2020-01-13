@@ -29,7 +29,7 @@
          [button setTitle:img[i] forState:(UIControlStateNormal)];
          button.titleLabel.font =[UIFont systemFontOfSize:10];
          button.tag  =i;
-          [button setTitleColor:[UIColor redColor] forState:(UIControlStateSelected)];
+          [button setTitleColor:[SWKit colorWithHexString:@"#00DD98"] forState:(UIControlStateSelected)];
          [button setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
          [button addTarget:self action:@selector(click:) forControlEvents:(UIControlEventTouchUpInside)];
          [self.contentView addSubview:button];

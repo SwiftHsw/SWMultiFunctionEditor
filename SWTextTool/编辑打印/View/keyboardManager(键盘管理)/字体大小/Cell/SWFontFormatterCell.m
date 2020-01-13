@@ -28,7 +28,7 @@
         button.backgroundColor =[SWKit colorWithHexString:@"#f5f5f5"];
         [button setTitle:img[i] forState:(UIControlStateNormal)];
         button.titleLabel.font =[UIFont systemFontOfSize:10];
-        [button setTitleColor:[UIColor redColor] forState:(UIControlStateSelected)];
+        [button setTitleColor:[SWKit colorWithHexString:@"#00DD98"] forState:(UIControlStateSelected)];
         [button setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
         [button addTarget:self action:@selector(click:) forControlEvents:(UIControlEventTouchUpInside)];
         button.tag = i;

@@ -10,8 +10,17 @@
 #import "SWKeyboardToolModel.h"
 #import "SWKeyboardCell.h"
 
-
+@interface SWEditorToolView()
+{
+    NSIndexPath *_selectIndexPath;
+    SWKeyboardCell *_selectCell;
+    NSArray *_imageArr;
+    NSArray *_selectImageArr;
+}
+@end
 @implementation SWEditorToolView
+
+
 
 - (instancetype)initWithFrame:(CGRect)frame{
     
@@ -19,9 +28,14 @@
         self.menuDataArray = [SWEditorToolView getMenuDataArray].mutableCopy;
         [self addSubview:self.menueCollection];
         [self addSubview:self.closeButton];
-        self.showViews = [[NSMutableArray alloc]initWithObjects:self.fontView,self.fromView,self.faceView,[UIView new],self.themeView,[UIView new], [UIView new],nil];
+        //self.fromView
+        //@"文本",@"表情",@"图片",@"主题",@"涂鸦"
+        
+        self.showViews = [[NSMutableArray alloc]initWithObjects:self.fontView,self.faceView,[UIView new],self.themeView,[UIView new], nil];
         
         self.backgroundColor = [UIColor whiteColor];
+      _imageArr  =  @[@"文本",@"表情",@"图片",@"主题",@"涂鸦"];
+      _selectImageArr =  @[@"文本-1",@"表情-1",@"图片-1",@"主题-1",@"涂鸦-1"];
         
     }
     
@@ -38,12 +52,26 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SWKeyboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
      cell.model = _menuDataArray[indexPath.row];
+    cell.tag = indexPath.row;
+    
+    if (_selectIndexPath == indexPath) {
+     cell.imageView.image = kImageName(_selectImageArr[indexPath.row]);
+    }else{
+      cell.imageView.image = kImageName(_imageArr[indexPath.row]);
+    }
+ 
+  
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+ 
+    //取消之前的选择
+
+   _selectIndexPath = indexPath;//当前选择的打钩
+    [collectionView reloadData];
+
     !self.sw_editorToolViewSelectActionIndex?:self.sw_editorToolViewSelectActionIndex(indexPath.row);
     
     //弹出动画处理
@@ -101,7 +129,8 @@
  @return 数组
  */
 +(NSMutableArray*)getMenuDataArray{
-    NSArray *dataArr = @[@"文本",@"表格",@"表情",@"图片",@"主题",@"二维码",@"涂鸦"];
+    //@"表格",@"二维码",
+    NSArray *dataArr = @[@"文本",@"表情",@"图片",@"主题",@"涂鸦"];
     NSMutableArray *result = [[NSMutableArray alloc]init];
     for (NSString *title in dataArr) {
         SWKeyboardToolModel *model = [[SWKeyboardToolModel alloc]init];
@@ -124,13 +153,12 @@
         flowLayout.minimumInteritemSpacing = 0;
         _menueCollection = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - 50, KHeight_Tabar) collectionViewLayout:flowLayout];
         
-        _menueCollection.backgroundColor = [UIColor redColor];
+        _menueCollection.backgroundColor = [UIColor whiteColor];
         _menueCollection.showsVerticalScrollIndicator = NO;
        _menueCollection.showsHorizontalScrollIndicator = NO;
        _menueCollection.delegate = self;
        _menueCollection.dataSource = self;
        [_menueCollection registerClass:[SWKeyboardCell class] forCellWithReuseIdentifier:@"cell"];
-               
     }
     
     return _menueCollection;
@@ -138,32 +166,24 @@
 -(SWFontView *)fontView{
     if (!_fontView) {
         _fontView =[[SWFontView alloc]initWithFrame:CGRectMake(0, KScreenHeight, KScreenWidth, keyBoxHeight)];
-        _fontView.backgroundColor = [SWKit randomColor];
+        _fontView.backgroundColor = [UIColor whiteColor];
     }
     return _fontView;
 }
-
--(UIView *)fromView{
-    if (!_fromView) {
-        _fromView = [UIView new];
-        _fromView.frame =CGRectMake(0, KScreenHeight, KScreenWidth, keyBoxHeight);
-        _fromView.backgroundColor = [SWKit randomColor];;
-    }
-    return _fromView;
-}
--(UIView *)faceView{
+ 
+-(SWFaceView *)faceView{
     if (!_faceView) {
-        _faceView =[[UIView alloc]initWithFrame:CGRectMake(0, KScreenHeight, KScreenWidth, keyBoxHeight)];
-        _faceView.backgroundColor =[SWKit randomColor] ;
+        _faceView =[[SWFaceView alloc]initWithFrame:CGRectMake(0, KScreenHeight, KScreenWidth, keyBoxHeight)];
+        _faceView.backgroundColor =[UIColor whiteColor];
     }
     return _faceView;
 }
-
+ 
 -(SWThemeView *)themeView{
     if (!_themeView) {
         _themeView =[SWThemeView sw_viewFromXib];
         _themeView.frame = CGRectMake(0, KScreenHeight, KScreenWidth, 180);
-        _themeView.backgroundColor = [SWKit colorWithHexString:@"#f5f5f5"];
+        _themeView.backgroundColor = [SWKit colorWithHexString:@"#999999"];
     }
     return _themeView;
 }

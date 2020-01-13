@@ -14,8 +14,11 @@
 #import "SWEditorBorderModel.h"
 #import "SWFontModel.h"
 #import "SWThemeModel.h"
+#import "SWImageViewController.h"
+#import "SettingViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIImagePickerControllerDelegate,
+UINavigationControllerDelegate>
 /**
  滚动主视图
  */
@@ -36,6 +39,10 @@
     
     [self setUpUI];
     [self addNotif];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTitle:@"浏览" ImageName:@"" highImageName:@"" target:self action:@selector(saveImage)];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"设置" selectedImageName:@"" target:self action:@selector(setting)];
+ 
+ 
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -56,7 +63,7 @@
     
     self.view.backgroundColor = bg_color;
     
-    self.title = @"SWTextTool";
+    self.title = @"本印助手";
     
     //添加主要控件
     
@@ -84,7 +91,8 @@
     [kNoti addObserver:self selector:@selector(changeTextMagin:) name:FONTROWMAGIN object:nil];
     ///写入主题
     [kNoti addObserver:self selector:@selector(insertTheme:) name:INSERTTHEME object:nil];
-     
+     ///插入表情
+     [kNoti addObserver:self selector:@selector(inserEmoji:) name:INSEREMOJI object:nil];
 }
 #pragma mark ------键盘以及功能回调--------
 -(void)keyboardWillShow:(NSNotification *)info{
@@ -93,7 +101,12 @@
      UIView * firstResponder = [self.view getCurrenfirstResponder];
     CGFloat keyboardH  = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
     ///隐藏所有的工具栏目
-    [self.keyBoardBox hideAllShowView];
+    if (self.keyBoardBox) {
+         [self.keyBoardBox hideAllShowView];
+    }
+    if ([firstResponder isKindOfClass:[UIAlertController class]]) {
+        return;
+    }
     if (firstResponder.tag==100001) {
         ///键盘弹出,更新坐标，f防止被挡住
         [self.scrollView keyBoardShowUpatafram:(keyboardH*.5)+KHeight_Tabar+pointMagin];
@@ -163,6 +176,99 @@
     NSDictionary *dict = [model getThemeImage:SCREEN_WIDTH image:image];
     [self.scrollView creatTheme:dict];
 }
+///插入一个表情
+-(void)inserEmoji:(NSNotification*)info{
+    [self.scrollView creatEmojiStickers:info.object];
+}
+
+///打开相册
+-(void)openAblum{
+//    SWWeakSelf(self);
+    
+     [self chooseActionsssss];
+    
+//    [LYFPhotosManager showPhotosManager:self withMaxImageCount:10 withAlbumArray:^(NSMutableArray<LYFPhotoModel *> *albumArray) {
+//        ///获取到图片插入编辑器
+//
+//    }];
+}
+#pragma mark - System Carme
+
+- (void)camerassssss
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.editing=YES;
+    picker.allowsEditing = YES;
+    if (@available(iOS 11.0, *)){
+        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentAutomatic];
+    }
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [picker.navigationBar  setTranslucent:NO];
+        
+        [kCurrentVC presentViewController:picker animated:YES completion:^{
+        }];
+    }else{
+        NSLog(@"模拟器不能拍照--");
+    }
+}
+// 相册
+-(void)chooseActionsssss{
+    UIImagePickerController *pictureVC = [[UIImagePickerController alloc] init];
+    pictureVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    pictureVC.allowsEditing = YES;
+    pictureVC.delegate = self;
+    if (@available(iOS 11.0, *)){
+        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentAutomatic];
+    }
+    [kCurrentVC presentViewController:pictureVC animated:YES completion:^{}];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [kCurrentVC dismissViewControllerAnimated:YES completion:^{
+        if (@available(iOS 11.0, *)){
+            [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+        }
+    }];
+}
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    [kCurrentVC dismissViewControllerAnimated:YES completion:^{
+        if (@available(iOS 11.0, *)){
+            [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+        }
+    }];
+    UIImage *originImage = [[UIImage alloc] init];
+    
+    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+        originImage = [info objectForKey:UIImagePickerControllerEditedImage]; //裁剪
+        originImage = [UIImage imageWithData:UIImageJPEGRepresentation(originImage, 0.01)];
+        
+    } else{
+        NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
+        if ([type isEqualToString:@"public.image"])
+        {
+            UIImage* image = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+            originImage = image;
+        }
+        
+    }
+    [self.scrollView creatImages:@[originImage]];
+////    [YYMetuProgressView show];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [YYMetuProgressView dismiss];
+//        StoryMakeImageEditorViewController *storyMakerVc = [[StoryMakeImageEditorViewController alloc] initWithImage:originImage];
+//        if (isIPad) {
+//             storyMakerVc.modalPresentationStyle = UIModalPresentationFullScreen;
+//        }
+//        storyMakerVc.modalPresentationStyle = UIModalPresentationFullScreen;
+//        [self presentViewController:storyMakerVc animated:YES completion:nil];
+//    });
+    
+}
+
+
 #pragma mark - Lazy
 - (SWMainScorllerView *)scrollView{
     if (!_scrollView) {
@@ -182,17 +288,75 @@
 
 -(SWEditorToolView *)keyBoardBox{
     if (!_keyBoardBox) {
+        SWWeakSelf(self);
         _keyBoardBox = [[SWEditorToolView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - KHeight_Tabar - SafeBottomHeight, SCREEN_WIDTH, KHeight_Tabar+SafeBottomHeight)];
         [_keyBoardBox setSw_editorToolViewDismiss:^(NSInteger index) {
             
         }];
         
         [_keyBoardBox setSw_editorToolViewSelectActionIndex:^(NSInteger index) {
-            
+            if (index == 2) {
+                //打开相册
+                  [weakself openAblum];
+            }else if (index == 4){
+                [SVProgressHUD showErrorWithStatus:@"该功能正在努力开发中,敬请期待～"];
+                return;
+            }
+            [weakself.scrollView setContentInset:UIEdgeInsetsMake(0, 0, keyBoxHeight, 0)];
         }];
- 
     }
     return _keyBoardBox;
 }
+
+
+
+- (void)saveImage {
+    SWLog(@"%f",self.scrollView.contentSize.height);
+    if (self.scrollView.contentSize.height > 77) {
+           self.navigationItem.rightBarButtonItem.enabled = YES;
+        self.scrollView.oldStickerView.isSelected = NO;
+        self.scrollView.oldStickerView = nil;
+        
+    }else{
+        [SVProgressHUD showErrorWithStatus:@"内容不够多哦～建议您编辑内容"];
+        return;
+    }
+    UIImage* viewImage = nil;
+    UIScrollView *scrollView = self.scrollView;
+    UIGraphicsBeginImageContextWithOptions(scrollView.contentSize, scrollView.opaque, 0.0);
+    {
+        CGPoint savedContentOffset = scrollView.contentOffset;
+        CGRect savedFrame = scrollView.frame;
+     
+        scrollView.contentOffset = CGPointZero;
+        scrollView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height+SafeBottomHeight+NavBarHeight);
+        //
+        
+        [scrollView.layer renderInContext: UIGraphicsGetCurrentContext()];
+        viewImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        scrollView.contentOffset = savedContentOffset;
+        scrollView.frame = savedFrame;
+    }
+    UIGraphicsEndImageContext();
+    
+    [SVProgressHUD showWithStatus:@"正在生成中，请稍后"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD dismiss];
+        SWImageViewController *vc = [[SWImageViewController alloc]init];
+        vc.img = viewImage;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    });
+}
+
+- (void)setting{
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[SettingViewController new]];
+      [[SWKit getCurrentVC] presentViewController:nav animated:YES completion:^{
+          
+      }];
+      
+}
+
 
 @end

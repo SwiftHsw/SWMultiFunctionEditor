@@ -53,7 +53,6 @@
     ///下载大图
     SWThemeModel * theme= self.VM.dataArray[indexPath.row];
  
-
     if (!theme.thumb_img) {
         [kNoti postNotificationName:INSERTTHEME object:theme userInfo:@{@"image":@""}];
         return;

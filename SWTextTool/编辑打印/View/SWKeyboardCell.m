@@ -11,7 +11,7 @@
  
 @interface SWKeyboardCell ()
 @property (nonatomic , strong)UILabel * titile;
-@property (nonatomic , strong)UIImageView * imageView;
+
 
 @end
 @implementation SWKeyboardCell
@@ -26,9 +26,9 @@
     [self.contentView sd_addSubviews:@[self.imageView,self.titile]];
     self.imageView.sd_layout
     .centerXEqualToView(self.contentView)
-    .topSpaceToView(self.contentView, 5)
-    .heightIs(25)
-    .widthIs(25);
+    .topSpaceToView(self.contentView, 10)
+    .heightIs(20)
+    .widthIs(20);
     
     self.titile.sd_layout
     .centerXEqualToView(self.contentView)
@@ -56,7 +56,9 @@
 -(UIImageView *)imageView{
     if (!_imageView) {
         _imageView= [[UIImageView alloc]init];
-        _imageView.backgroundColor = bg_color;
+        _imageView.backgroundColor = [UIColor clearColor];
+        kImageContenMode(_imageView);
+        
     }
     return _imageView;
 }

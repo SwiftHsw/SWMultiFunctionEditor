@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0401E99223CC13A50062A67F /* SWFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401E99123CC13A50062A67F /* SWFaceView.m */; };
+		0401E99A23CC13CE0062A67F /* YZFaceIndexCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401E99423CC13CE0062A67F /* YZFaceIndexCell.m */; };
+		0401E99B23CC13CE0062A67F /* YZEmojiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0401E99623CC13CE0062A67F /* YZEmojiCell.xib */; };
+		0401E99C23CC13CE0062A67F /* YZEmojiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401E99723CC13CE0062A67F /* YZEmojiCell.m */; };
+		0401E99D23CC13CE0062A67F /* YZFaceIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0401E99923CC13CE0062A67F /* YZFaceIndexCell.xib */; };
+		0401E9A123CC13D40062A67F /* YZEmojiViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401E9A023CC13D40062A67F /* YZEmojiViewModel.m */; };
+		0401E9CB23CC3C090062A67F /* SWImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401E9CA23CC3C090062A67F /* SWImageViewController.m */; };
+		0401E9CE23CC4D380062A67F /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401E9CD23CC4D380062A67F /* SettingViewController.m */; };
+		0401E9D523CC5C050062A67F /* ATAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401E9D223CC5C050062A67F /* ATAboutUsViewController.m */; };
+		0401E9D623CC5C050062A67F /* ATAboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0401E9D423CC5C050062A67F /* ATAboutUsViewController.xib */; };
+		0401E9D923CC5C270062A67F /* SWFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401E9D823CC5C270062A67F /* SWFeedbackViewController.m */; };
+		0401E9DD23CC5C3C0062A67F /* UITextView+WZB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401E9DB23CC5C3C0062A67F /* UITextView+WZB.m */; };
 		0411274423ADBB87008DB54F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411274323ADBB87008DB54F /* AppDelegate.m */; };
 		0411274A23ADBB87008DB54F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411274923ADBB87008DB54F /* ViewController.m */; };
 		0411274D23ADBB87008DB54F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0411274B23ADBB87008DB54F /* Main.storyboard */; };
@@ -68,7 +80,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0411273F23ADBB87008DB54F /* SWTextTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWTextTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0401E99023CC13A50062A67F /* SWFaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFaceView.h; sourceTree = "<group>"; };
+		0401E99123CC13A50062A67F /* SWFaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFaceView.m; sourceTree = "<group>"; };
+		0401E99423CC13CE0062A67F /* YZFaceIndexCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZFaceIndexCell.m; sourceTree = "<group>"; };
+		0401E99523CC13CE0062A67F /* YZEmojiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZEmojiCell.h; sourceTree = "<group>"; };
+		0401E99623CC13CE0062A67F /* YZEmojiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZEmojiCell.xib; sourceTree = "<group>"; };
+		0401E99723CC13CE0062A67F /* YZEmojiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZEmojiCell.m; sourceTree = "<group>"; };
+		0401E99823CC13CE0062A67F /* YZFaceIndexCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZFaceIndexCell.h; sourceTree = "<group>"; };
+		0401E99923CC13CE0062A67F /* YZFaceIndexCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZFaceIndexCell.xib; sourceTree = "<group>"; };
+		0401E99F23CC13D40062A67F /* YZEmojiViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZEmojiViewModel.h; sourceTree = "<group>"; };
+		0401E9A023CC13D40062A67F /* YZEmojiViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZEmojiViewModel.m; sourceTree = "<group>"; };
+		0401E9C923CC3C090062A67F /* SWImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWImageViewController.h; sourceTree = "<group>"; };
+		0401E9CA23CC3C090062A67F /* SWImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWImageViewController.m; sourceTree = "<group>"; };
+		0401E9CC23CC4D380062A67F /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		0401E9CD23CC4D380062A67F /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		0401E9D223CC5C050062A67F /* ATAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAboutUsViewController.m; sourceTree = "<group>"; };
+		0401E9D323CC5C050062A67F /* ATAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAboutUsViewController.h; sourceTree = "<group>"; };
+		0401E9D423CC5C050062A67F /* ATAboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATAboutUsViewController.xib; sourceTree = "<group>"; };
+		0401E9D723CC5C260062A67F /* SWFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWFeedbackViewController.h; sourceTree = "<group>"; };
+		0401E9D823CC5C270062A67F /* SWFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWFeedbackViewController.m; sourceTree = "<group>"; };
+		0401E9DB23CC5C3C0062A67F /* UITextView+WZB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+WZB.m"; sourceTree = "<group>"; };
+		0401E9DC23CC5C3C0062A67F /* UITextView+WZB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+WZB.h"; sourceTree = "<group>"; };
+		0411273F23ADBB87008DB54F /* 本印助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "本印助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0411274223ADBB87008DB54F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0411274323ADBB87008DB54F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0411274823ADBB87008DB54F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../ViewController.h; sourceTree = "<group>"; };
@@ -189,6 +222,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0401E99323CC13CE0062A67F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0401E99523CC13CE0062A67F /* YZEmojiCell.h */,
+				0401E99723CC13CE0062A67F /* YZEmojiCell.m */,
+				0401E99623CC13CE0062A67F /* YZEmojiCell.xib */,
+				0401E99823CC13CE0062A67F /* YZFaceIndexCell.h */,
+				0401E99423CC13CE0062A67F /* YZFaceIndexCell.m */,
+				0401E99923CC13CE0062A67F /* YZFaceIndexCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0401E99E23CC13D40062A67F /* 数据接口 */ = {
+			isa = PBXGroup;
+			children = (
+				0401E99F23CC13D40062A67F /* YZEmojiViewModel.h */,
+				0401E9A023CC13D40062A67F /* YZEmojiViewModel.m */,
+			);
+			path = "数据接口";
+			sourceTree = "<group>";
+		};
+		0401E9DA23CC5C3C0062A67F /* WZBTextView */ = {
+			isa = PBXGroup;
+			children = (
+				0401E9DB23CC5C3C0062A67F /* UITextView+WZB.m */,
+				0401E9DC23CC5C3C0062A67F /* UITextView+WZB.h */,
+			);
+			path = WZBTextView;
+			sourceTree = "<group>";
+		};
 		0411273623ADBB87008DB54F = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +266,7 @@
 		0411274023ADBB87008DB54F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0411273F23ADBB87008DB54F /* SWTextTool.app */,
+				0411273F23ADBB87008DB54F /* 本印助手.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +289,7 @@
 		0411275B23ADBEE8008DB54F /* 编辑打印 */ = {
 			isa = PBXGroup;
 			children = (
+				0401E9DA23CC5C3C0062A67F /* WZBTextView */,
 				041127CC23AE11B8008DB54F /* NetWork(网络请求) */,
 				0411278123ADC59C008DB54F /* 文本贴纸 */,
 				0411277423ADC35A008DB54F /* 表格贴纸 */,
@@ -262,6 +327,15 @@
 			children = (
 				0411274823ADBB87008DB54F /* ViewController.h */,
 				0411274923ADBB87008DB54F /* ViewController.m */,
+				0401E9C923CC3C090062A67F /* SWImageViewController.h */,
+				0401E9CA23CC3C090062A67F /* SWImageViewController.m */,
+				0401E9CC23CC4D380062A67F /* SettingViewController.h */,
+				0401E9CD23CC4D380062A67F /* SettingViewController.m */,
+				0401E9D323CC5C050062A67F /* ATAboutUsViewController.h */,
+				0401E9D223CC5C050062A67F /* ATAboutUsViewController.m */,
+				0401E9D423CC5C050062A67F /* ATAboutUsViewController.xib */,
+				0401E9D723CC5C260062A67F /* SWFeedbackViewController.h */,
+				0401E9D823CC5C270062A67F /* SWFeedbackViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -347,7 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				0473CE7C23B0AABD00F119DF /* 沙盒管理 */,
-				041127BF23AE0A0D008DB54F /* 表格视图 */,
 				041127C023AE0A0D008DB54F /* 表情视图 */,
 				041127BE23AE0A0D008DB54F /* 文本视图 */,
 				041127BD23AE0A0D008DB54F /* 文本素材 */,
@@ -384,16 +457,13 @@
 			path = "文本视图";
 			sourceTree = "<group>";
 		};
-		041127BF23AE0A0D008DB54F /* 表格视图 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "表格视图";
-			sourceTree = "<group>";
-		};
 		041127C023AE0A0D008DB54F /* 表情视图 */ = {
 			isa = PBXGroup;
 			children = (
+				0401E99E23CC13D40062A67F /* 数据接口 */,
+				0401E99323CC13CE0062A67F /* Cell */,
+				0401E99023CC13A50062A67F /* SWFaceView.h */,
+				0401E99123CC13A50062A67F /* SWFaceView.m */,
 			);
 			path = "表情视图";
 			sourceTree = "<group>";
@@ -553,7 +623,7 @@
 			);
 			name = SWTextTool;
 			productName = SWTextTool;
-			productReference = 0411273F23ADBB87008DB54F /* SWTextTool.app */;
+			productReference = 0411273F23ADBB87008DB54F /* 本印助手.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -595,6 +665,7 @@
 			files = (
 				0411277323ADC2DD008DB54F /* image_btn_rotate@2x.png in Resources */,
 				0411275223ADBB89008DB54F /* LaunchScreen.storyboard in Resources */,
+				0401E99D23CC13CE0062A67F /* YZFaceIndexCell.xib in Resources */,
 				0411278B23ADC5A2008DB54F /* YZChatInputView.xib in Resources */,
 				0411280923AE1FAA008DB54F /* SWFontSpaceNumCell.xib in Resources */,
 				0473CE8623B0B32500F119DF /* SWThemeView.xib in Resources */,
@@ -602,10 +673,12 @@
 				041127E923AE18D7008DB54F /* SWFontStyleCell.xib in Resources */,
 				041127DA23AE13CA008DB54F /* SWEditorBorderCell.xib in Resources */,
 				0411274F23ADBB89008DB54F /* Assets.xcassets in Resources */,
+				0401E99B23CC13CE0062A67F /* YZEmojiCell.xib in Resources */,
 				0411274D23ADBB87008DB54F /* Main.storyboard in Resources */,
 				0411277023ADC2DD008DB54F /* image_btn_remove@2x.png in Resources */,
 				0473CE9123B0B59500F119DF /* SWThemeCell.xib in Resources */,
 				0411277223ADC2DD008DB54F /* image_btn_resize@2x.png in Resources */,
+				0401E9D623CC5C050062A67F /* ATAboutUsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +731,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0401E9A123CC13D40062A67F /* YZEmojiViewModel.m in Sources */,
 				0411277A23ADC35A008DB54F /* LabView.m in Sources */,
+				0401E9D523CC5C050062A67F /* ATAboutUsViewController.m in Sources */,
 				041127AE23ADEDBA008DB54F /* UIView+SWView.m in Sources */,
 				041127B723ADFFF8008DB54F /* SWKeyboardCell.m in Sources */,
 				041127F723AE1D98008DB54F /* SWBaseFontFormaterCell.m in Sources */,
@@ -678,15 +753,19 @@
 				0411274A23ADBB87008DB54F /* ViewController.m in Sources */,
 				041127FA23AE1E12008DB54F /* SWFontFormatterCell.m in Sources */,
 				041127E423AE1782008DB54F /* SWFontViewModel.m in Sources */,
+				0401E99A23CC13CE0062A67F /* YZFaceIndexCell.m in Sources */,
 				041127F123AE1C17008DB54F /* PublicAudioPlayProgressView.m in Sources */,
 				0473CE9023B0B59500F119DF /* SWThemeCell.m in Sources */,
 				0411276923ADC123008DB54F /* NSString+KKStringDate.m in Sources */,
 				041127AB23ADECCD008DB54F /* SWViewFontModel.m in Sources */,
 				041127DD23AE1548008DB54F /* SWFontListView.m in Sources */,
+				0401E9CB23CC3C090062A67F /* SWImageViewController.m in Sources */,
 				0473CE8423B0B31800F119DF /* SWThemeView.m in Sources */,
 				0411274423ADBB87008DB54F /* AppDelegate.m in Sources */,
+				0401E9DD23CC5C3C0062A67F /* UITextView+WZB.m in Sources */,
 				041127C823AE10F5008DB54F /* SWFontBorder.m in Sources */,
 				0473CE7F23B0AABD00F119DF /* JRSandBoxPath.m in Sources */,
+				0401E99C23CC13CE0062A67F /* YZEmojiCell.m in Sources */,
 				0411275523ADBB89008DB54F /* main.m in Sources */,
 				0411277D23ADC3A2008DB54F /* SWBaseLable.m in Sources */,
 				0411280423AE1F5F008DB54F /* SWFontSpceModel.m in Sources */,
@@ -698,10 +777,13 @@
 				041127B123ADF896008DB54F /* SWEditorToolView.m in Sources */,
 				041127B423ADFB69008DB54F /* SWKeyboardToolModel.m in Sources */,
 				041127D923AE13CA008DB54F /* SWEditorBorderCell.m in Sources */,
+				0401E9D923CC5C270062A67F /* SWFeedbackViewController.m in Sources */,
 				0411277123ADC2DD008DB54F /* GYStickerView.m in Sources */,
 				0411276223ADC03E008DB54F /* SWMainScorllerView.m in Sources */,
 				041127E123AE15B0008DB54F /* SWFontModel.m in Sources */,
+				0401E99223CC13A50062A67F /* SWFaceView.m in Sources */,
 				041127C523AE0A1E008DB54F /* SWFontView.m in Sources */,
+				0401E9CE23CC4D380062A67F /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,8 +935,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sw.SWTextTool;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "本印助手";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -874,8 +956,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sw.SWTextTool;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "本印助手";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -47,6 +47,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"cell";
     SWFontSpaceNumCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
     SWFontSpceModel * m = self.data[indexPath.row];
     [cell setModel:m];
     return cell;

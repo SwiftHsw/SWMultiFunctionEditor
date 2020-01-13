@@ -61,16 +61,20 @@
      for (int i = 0; i<3; i++) {
          UIButton * button = [[UIButton alloc]init];
          button.frame = CGRectMake(0, i*itemHeight + (i==0?10:0), itemWidth, itemHeight);
-         button.backgroundColor = [UIColor redColor];
+         button.backgroundColor = [SWKit colorWithHexString:@"#999999"];
          [button addTarget:self action:@selector(leftMenueClick:) forControlEvents:(UIControlEventTouchUpInside)];
-         [button setTitle:[NSString stringWithFormat:@"%d",i] forState:(UIControlStateNormal)];
+//         [button setTitle:[NSString stringWithFormat:@"%d",i] forState:(UIControlStateNormal)];
          button.tag = i;
          [self addSubview:button];
-         button.backgroundColor = i==0?[UIColor grayColor]:[UIColor redColor];
+        
          if (i==0) {
              self.currentButton = button;
          }
-
+         NSArray *arr = @[@"素材",@"文本素材",@"多功能"];
+ 
+         [button setImage:kImageName(arr[i]) forState:UIControlStateNormal];
+         
+         
      }
      
      [self addSubview:self.fontBoderView];
@@ -89,8 +93,8 @@
      indexView.hidden  =NO;
      self.currentView = indexView;
      
-     self.currentButton.backgroundColor =[UIColor redColor];
-     button.backgroundColor = [UIColor grayColor];
+     self.currentButton.backgroundColor = [SWKit colorWithHexString:@"#999999"];
+     button.backgroundColor = [SWKit colorWithHexString:@"#00DD98"];  ;
      self.currentButton = button;
      
      

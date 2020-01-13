@@ -9,6 +9,8 @@
 #import "SWBaseView.h"
 #import "SWFontView.h"
 #import "SWThemeView.h"
+#import "SWFaceView.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SWEditorToolView : SWBaseView<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -20,12 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) NSMutableArray *showViews;
 //文本
 @property(nonatomic,strong)SWFontView *fontView;
-//表格
-@property(nonatomic,strong)UIView *fromView;
 //主题
 @property(nonatomic,strong)SWThemeView *themeView;
 //表情
-@property(nonatomic,strong)UIView *faceView;
+@property(nonatomic,strong)SWFaceView *faceView;
 
 //记录弹出的视图
 @property (nonatomic , weak)UIView * showView;
