@@ -16,6 +16,7 @@
 #import "SWThemeModel.h"
 #import "SWImageViewController.h"
 #import "SettingViewController.h"
+#import "SWEditorDrawContro.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate,
 UINavigationControllerDelegate>
@@ -299,8 +300,11 @@ UINavigationControllerDelegate>
                 //打开相册
                   [weakself openAblum];
             }else if (index == 4){
-                [SVProgressHUD showErrorWithStatus:@"该功能正在努力开发中,敬请期待～"];
-                return;
+                SWEditorDrawContro *vc = [SWEditorDrawContro new];
+                [vc setBackCpltion:^(UIImage * _Nonnull img) {
+                    [weakself.scrollView creatImages:@[img]];
+                }];
+                [self.navigationController pushViewController:vc animated:YES];
             }
             [weakself.scrollView setContentInset:UIEdgeInsetsMake(0, 0, keyBoxHeight, 0)];
         }];

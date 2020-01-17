@@ -78,7 +78,7 @@
     }else if (indexPath.row == 1){
         [self.navigationController pushViewController:[ATAboutUsViewController new] animated:YES];
     }else if (indexPath.row == 3){
-        NSString *str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@?action=write-review", @"1492654178"];
+        NSString *str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@?action=write-review", @"1494875118"];
         [[UIApplication sharedApplication]openURL:[NSURL URLWithString:str]];
         
     }

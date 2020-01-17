@@ -76,6 +76,12 @@
 		0473CE8C23B0B40800F119DF /* SWThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0473CE8B23B0B40800F119DF /* SWThemeModel.m */; };
 		0473CE9023B0B59500F119DF /* SWThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0473CE8E23B0B59500F119DF /* SWThemeCell.m */; };
 		0473CE9123B0B59500F119DF /* SWThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0473CE8F23B0B59500F119DF /* SWThemeCell.xib */; };
+		04DB185823D0039900322E0D /* SWEditorDrawContro.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB185723D0039900322E0D /* SWEditorDrawContro.m */; };
+		04DB186423D003CC00322E0D /* YZDrawToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DB185B23D003CC00322E0D /* YZDrawToolView.xib */; };
+		04DB186523D003CC00322E0D /* YZDrawToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB185C23D003CC00322E0D /* YZDrawToolView.m */; };
+		04DB186623D003CC00322E0D /* YZDrawWithView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB186023D003CC00322E0D /* YZDrawWithView.m */; };
+		04DB186723D003CC00322E0D /* YZEditorDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB186323D003CC00322E0D /* YZEditorDrawView.m */; };
+		04DB186B23D0043700322E0D /* YZPathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB186A23D0043700322E0D /* YZPathModel.m */; };
 		ECBF667A02CCA286C336B6B1 /* Pods_SWTextTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9722F90D00D8E508A5C8E83 /* Pods_SWTextTool.framework */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +211,17 @@
 		0473CE8D23B0B59500F119DF /* SWThemeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWThemeCell.h; sourceTree = "<group>"; };
 		0473CE8E23B0B59500F119DF /* SWThemeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWThemeCell.m; sourceTree = "<group>"; };
 		0473CE8F23B0B59500F119DF /* SWThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWThemeCell.xib; sourceTree = "<group>"; };
+		04DB185623D0039900322E0D /* SWEditorDrawContro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWEditorDrawContro.h; sourceTree = "<group>"; };
+		04DB185723D0039900322E0D /* SWEditorDrawContro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWEditorDrawContro.m; sourceTree = "<group>"; };
+		04DB185B23D003CC00322E0D /* YZDrawToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZDrawToolView.xib; sourceTree = "<group>"; };
+		04DB185C23D003CC00322E0D /* YZDrawToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZDrawToolView.m; sourceTree = "<group>"; };
+		04DB185D23D003CC00322E0D /* YZDrawToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZDrawToolView.h; sourceTree = "<group>"; };
+		04DB185F23D003CC00322E0D /* YZDrawWithView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZDrawWithView.h; sourceTree = "<group>"; };
+		04DB186023D003CC00322E0D /* YZDrawWithView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZDrawWithView.m; sourceTree = "<group>"; };
+		04DB186223D003CC00322E0D /* YZEditorDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZEditorDrawView.h; sourceTree = "<group>"; };
+		04DB186323D003CC00322E0D /* YZEditorDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZEditorDrawView.m; sourceTree = "<group>"; };
+		04DB186923D0043700322E0D /* YZPathModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZPathModel.h; sourceTree = "<group>"; };
+		04DB186A23D0043700322E0D /* YZPathModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZPathModel.m; sourceTree = "<group>"; };
 		CC815E960BCDC4378EF0EF87 /* Pods-SWTextTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWTextTool.release.xcconfig"; path = "Target Support Files/Pods-SWTextTool/Pods-SWTextTool.release.xcconfig"; sourceTree = "<group>"; };
 		DF1A51CB928C2A8DA6390B90 /* Pods-SWTextTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWTextTool.debug.xcconfig"; path = "Target Support Files/Pods-SWTextTool/Pods-SWTextTool.debug.xcconfig"; sourceTree = "<group>"; };
 		F9722F90D00D8E508A5C8E83 /* Pods_SWTextTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWTextTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,6 +325,7 @@
 		0411275C23ADBF11008DB54F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04DB185923D003CC00322E0D /* View */,
 				041127BC23AE09A4008DB54F /* MainView(主要) */,
 				041127BB23AE098F008DB54F /* keyboardManager(键盘管理) */,
 				0411277B23ADC3A2008DB54F /* SWBaseLable.h */,
@@ -336,6 +354,8 @@
 				0401E9D423CC5C050062A67F /* ATAboutUsViewController.xib */,
 				0401E9D723CC5C260062A67F /* SWFeedbackViewController.h */,
 				0401E9D823CC5C270062A67F /* SWFeedbackViewController.m */,
+				04DB185623D0039900322E0D /* SWEditorDrawContro.h */,
+				04DB185723D0039900322E0D /* SWEditorDrawContro.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -343,6 +363,7 @@
 		0411275E23ADBF11008DB54F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04DB186823D0043700322E0D /* 绘制数据模型 */,
 				0411277E23ADC4F9008DB54F /* SWPickViewModel.h */,
 				0411277F23ADC4F9008DB54F /* SWPickViewModel.m */,
 				0411278F23ADC645008DB54F /* SWEditorBorderModel.h */,
@@ -587,6 +608,53 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		04DB185923D003CC00322E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04DB185A23D003CC00322E0D /* 菜单栏 */,
+				04DB185E23D003CC00322E0D /* 粗细 */,
+				04DB186123D003CC00322E0D /* 画板 */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04DB185A23D003CC00322E0D /* 菜单栏 */ = {
+			isa = PBXGroup;
+			children = (
+				04DB185B23D003CC00322E0D /* YZDrawToolView.xib */,
+				04DB185C23D003CC00322E0D /* YZDrawToolView.m */,
+				04DB185D23D003CC00322E0D /* YZDrawToolView.h */,
+			);
+			path = "菜单栏";
+			sourceTree = "<group>";
+		};
+		04DB185E23D003CC00322E0D /* 粗细 */ = {
+			isa = PBXGroup;
+			children = (
+				04DB185F23D003CC00322E0D /* YZDrawWithView.h */,
+				04DB186023D003CC00322E0D /* YZDrawWithView.m */,
+			);
+			path = "粗细";
+			sourceTree = "<group>";
+		};
+		04DB186123D003CC00322E0D /* 画板 */ = {
+			isa = PBXGroup;
+			children = (
+				04DB186223D003CC00322E0D /* YZEditorDrawView.h */,
+				04DB186323D003CC00322E0D /* YZEditorDrawView.m */,
+			);
+			path = "画板";
+			sourceTree = "<group>";
+		};
+		04DB186823D0043700322E0D /* 绘制数据模型 */ = {
+			isa = PBXGroup;
+			children = (
+				04DB186923D0043700322E0D /* YZPathModel.h */,
+				04DB186A23D0043700322E0D /* YZPathModel.m */,
+			);
+			path = "绘制数据模型";
+			sourceTree = "<group>";
+		};
 		898558D5BC75083F1ECFF7CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +731,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DB186423D003CC00322E0D /* YZDrawToolView.xib in Resources */,
 				0411277323ADC2DD008DB54F /* image_btn_rotate@2x.png in Resources */,
 				0411275223ADBB89008DB54F /* LaunchScreen.storyboard in Resources */,
 				0401E99D23CC13CE0062A67F /* YZFaceIndexCell.xib in Resources */,
@@ -739,7 +808,9 @@
 				041127F723AE1D98008DB54F /* SWBaseFontFormaterCell.m in Sources */,
 				041127CF23AE11B8008DB54F /* YZNetWorking.m in Sources */,
 				0411280823AE1FAA008DB54F /* SWFontSpaceNumCell.m in Sources */,
+				04DB186723D003CC00322E0D /* YZEditorDrawView.m in Sources */,
 				041127E823AE18D7008DB54F /* SWFontStyleCell.m in Sources */,
+				04DB185823D0039900322E0D /* SWEditorDrawContro.m in Sources */,
 				041127BA23AE0902008DB54F /* UIView+Extension.m in Sources */,
 				041127CB23AE1155008DB54F /* SWEditorBoderViewModel.m in Sources */,
 				0411278A23ADC5A2008DB54F /* ChatView.m in Sources */,
@@ -765,15 +836,18 @@
 				0401E9DD23CC5C3C0062A67F /* UITextView+WZB.m in Sources */,
 				041127C823AE10F5008DB54F /* SWFontBorder.m in Sources */,
 				0473CE7F23B0AABD00F119DF /* JRSandBoxPath.m in Sources */,
+				04DB186623D003CC00322E0D /* YZDrawWithView.m in Sources */,
 				0401E99C23CC13CE0062A67F /* YZEmojiCell.m in Sources */,
 				0411275523ADBB89008DB54F /* main.m in Sources */,
 				0411277D23ADC3A2008DB54F /* SWBaseLable.m in Sources */,
 				0411280423AE1F5F008DB54F /* SWFontSpceModel.m in Sources */,
 				0411278E23ADC5FC008DB54F /* SWBaseView.m in Sources */,
 				0473CE8923B0B3DE00F119DF /* SWThemeViewModel.m in Sources */,
+				04DB186B23D0043700322E0D /* YZPathModel.m in Sources */,
 				041127ED23AE1BDE008DB54F /* SWFontSizeSliderView.m in Sources */,
 				0473CE8C23B0B40800F119DF /* SWThemeModel.m in Sources */,
 				041127F423AE1D34008DB54F /* SWFontFormatView.m in Sources */,
+				04DB186523D003CC00322E0D /* YZDrawToolView.m in Sources */,
 				041127B123ADF896008DB54F /* SWEditorToolView.m in Sources */,
 				041127B423ADFB69008DB54F /* SWKeyboardToolModel.m in Sources */,
 				041127D923AE13CA008DB54F /* SWEditorBorderCell.m in Sources */,
@@ -925,7 +999,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6Y5SA2BUN;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WBVZ5G95TG;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SWTextTool/编辑打印/SWTextTool.pch";
@@ -934,6 +1009,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sw.SWTextTool;
 				PRODUCT_NAME = "本印助手";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -946,7 +1022,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6Y5SA2BUN;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WBVZ5G95TG;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SWTextTool/编辑打印/SWTextTool.pch";
@@ -955,6 +1032,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sw.SWTextTool;
 				PRODUCT_NAME = "本印助手";
 				TARGETED_DEVICE_FAMILY = 1;

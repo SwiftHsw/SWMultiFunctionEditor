@@ -32,4 +32,10 @@ typedef NS_ENUM(NSInteger,SWFontTextAligementType) {
     Font_Right=2,//左对齐
 };
 
+typedef NS_ENUM(NSInteger,SWDrawToolType) {
+    Stroke=0,//笔画
+    Eraser=1,//橡皮擦
+    Undo=2,//撤销
+    Reply=3,//恢复
+};
 #endif /* Other_h */

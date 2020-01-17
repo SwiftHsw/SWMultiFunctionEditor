@@ -29,13 +29,13 @@
         [self addSubview:self.menueCollection];
         [self addSubview:self.closeButton];
         //self.fromView
-        //@"文本",@"表情",@"图片",@"主题",@"涂鸦"
+        //@"文本",@"表情",@"图片",@"主题",@"涂鸦" ,
         
-        self.showViews = [[NSMutableArray alloc]initWithObjects:self.fontView,self.faceView,[UIView new],self.themeView,[UIView new], nil];
+        self.showViews = [[NSMutableArray alloc]initWithObjects:self.fontView,self.faceView,[UIView new],self.themeView, [UIView new], nil];
         
         self.backgroundColor = [UIColor whiteColor];
       _imageArr  =  @[@"文本",@"表情",@"图片",@"主题",@"涂鸦"];
-      _selectImageArr =  @[@"文本-1",@"表情-1",@"图片-1",@"主题-1",@"涂鸦-1"];
+      _selectImageArr =  @[@"文本-1",@"表情-1",@"图片-1",@"主题-1", @"涂鸦-1"];
         
     }
     
@@ -130,7 +130,7 @@
  */
 +(NSMutableArray*)getMenuDataArray{
     //@"表格",@"二维码",
-    NSArray *dataArr = @[@"文本",@"表情",@"图片",@"主题",@"涂鸦"];
+    NSArray *dataArr = @[@"文本",@"表情",@"图片",@"主题" ,@"涂鸦"];
     NSMutableArray *result = [[NSMutableArray alloc]init];
     for (NSString *title in dataArr) {
         SWKeyboardToolModel *model = [[SWKeyboardToolModel alloc]init];
