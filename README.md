@@ -10,10 +10,42 @@
 >1。字体SWBaseTextView.h文件里面，实现了自定义占位文字属性，以及超过字符和长度等。字体的大小，加粗，斜体，对齐方式，间距等属性知识；
 
 > 2。解决UIScorllView和手势冲突，实现了自定义贴纸功能，包括帖子内输入文字，以及贴纸删除，旋转，拉伸等操作；
+```
+#pragma mark - 解决手势冲突
 
-> 3。插入自定义表情作为贴纸插入界面；
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    //解决移动贴纸，scrollView会滚动
+    //获取当天触发的View
+    UIView *view = [super hitTest:point withEvent:event];
+    BOOL isoldView = [view isEqual:_oldStickerView] ;
+    //不是贴纸或者表格就打开，是的话就关闭
+    self.scrollEnabled = !isoldView ;
+    self.isClickMe = [view isEqual:self];
+    
+    BOOL is = [view.superview isKindOfClass:[GYStickerView class]] ||  [view.superview isKindOfClass:[LabView class]];
+    if (is) {
+        GYStickerView *sup = (GYStickerView *)view.superview;
+        if ([sup isKindOfClass:[LabView class]]) {
+            sup = (GYStickerView *)view.superview.superview;
+        }
+        self.scrollEnabled = !sup.isSelected;
+        
+    }
+    
+    return view;
+    
+}
+```
 
-> 4。插入自定义图片
+> 3。插入自定义表情作为贴纸插入界面；（方法：通过字典来新增一个key值，当操作界面的时候能够获取到当前的贴纸是第几个）
+
+> 4。插入自定义图片（方法：通过字典来新增一个key值，当操作界面的时候能够获取到当前的贴纸是第几个）
+
+```
+///把坐标放进字典
+    [self.pointDictionary setObject:[NSNumber numberWithFloat:(CGRectGetMaxY(stickerView.frame))] forKey:[NSString stringWithFormat:@"%ld",(long)contentView.tag]];
+
+```
 
 >5。实现主题功能（从服务端获取主题，再通过缩放系数来切割上中下三张图片）代码如下
 ```
@@ -21,6 +53,9 @@
         UIImage *imageCenter = [UIImage imageWithCGImage:imageCenterRef]; 
         
 ```
+>6.每一个操作都必须要调用demo 中的UIScorllView容量ContenSize，代码如下
+
+
 
 
 ## demo说明
