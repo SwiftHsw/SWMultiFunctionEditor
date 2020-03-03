@@ -1,6 +1,9 @@
 # SWMultiFunctionEditor
 超级编辑器，多功能
 
+
+![演示图](https://github.com/SwiftHsw/SWMultiFunctionEditor/blob/master/%E6%BC%94%E7%A4%BA.gif)
+
 ###前言
 
 >作者脑洞大开，从现有的app里面写过的功能拿出来单独做一个demo，这边我想说的是，逻辑功能比较齐全，很多大项目里面都会用到一些基础功能，所以我已经实现了这个demo
